@@ -36,15 +36,69 @@ count: false
 
 Like, did we... make it?
 
+???
+
+I remember when I started to work on Rust, in 2011, I figured it was a doomed effort.
+
+I told myself that the first time I heard about some really cool thing and *only later* discovered it was written in Rust, that would be success. "Somebody using Rust that I don't know personally"
+
+Well, clearly we crossed *that* threshold, so I guess it's time to set a new goal.
+
+--
+
+.center[.p50[
+![Back in time](https://media.giphy.com/media/ZSSoLmkYURcWqKFdVA/source.gif)
+]]
+
 ---
 
 # 2015
 
 ???
 
-But let's step back a minute, to 2015, when Rust 1.0 was released
+But let's step back a minute, to 2015...what happened that year...
+
+
+---
+
+# 2015
+
+???
+
+what happened in 2015...nope, not that...
 
 --
+
+.center[
+![The dress](content/images/the-dress.jpg)
+]
+
+---
+
+# 2015
+
+.center[.p50[
+![Left shark](content/images/left-shark.png)
+]
+]
+
+???
+
+...nope, keep going, something else happened that year...
+
+---
+
+# 2015
+
+.center[
+  ![Rust 1.0 announcement](content/images/2015-05-15-Blog.png)
+]
+
+???
+
+Ah yes, that's it!
+
+---
 
 .center[
 Rust started with the quixotic dream of delivering the
@@ -66,29 +120,22 @@ that comes with it
 
 - Plan:
   - Control and performance predictability of C++
-  - Feel of a high-level language like JavaScript
-
-???
-
-* Rust 1.0 launched 6 years ago
-* The plan then was the same as it is now:
-  * Can we make a systems language that gives you all the control of C++
-  * 
+  - Feel of a high-level language like JavaScript 
 
 ---
 
 # Rust journey
 
-1. Show it can work
+1. Show it can work (2015)
 
 --
-2. Sustainability, adoption, production
+2. Sustainability, adoption, production (2021)
 
 --
 3. ???
 
 --
-4. Profit
+4. Profit (2024)
 
 ---
 
@@ -97,14 +144,27 @@ that comes with it
 *Graph:* 
 
 ```
-C++         Rust
-
-        JS, Ruby, Python
+    │
+    │ C++             Rust
+    │
+    │               xx
+    │              xx
+    │             xx
+    │            xx
+    │           xx
+    │          xx
+    │        xx
+    │        x
+    │       x
+    │     xx         JS, Ruby, Python
+    │    xx
+    │
+    └─────────────────────────────────
 ```
 
 ???
 
-
+What happens if we truly achieve our dream?
 
 ---
 
@@ -116,6 +176,8 @@ Yes, traditional "systems programming" targets:
 * Foundational infrastructure
 * Kernel hacking
 
+--
+
 But also other domains, when used at scale:
 
 * Websites, day-to-day business logic
@@ -125,7 +187,15 @@ But also other domains, when used at scale:
 
 # Business logic, really?
 
-Isn't that the prototypical case where you want to move fast?
+???
+
+Isn't that the prototypical case for agility?
+
+Isn't programmer time worth more than computer time?
+
+--
+
+Yes.
 
 ---
 
@@ -133,6 +203,10 @@ Isn't that the prototypical case where you want to move fast?
 
 .font500[🖥️]
 
+???
+
+Well, it's true if you're running a program on one computer, programmer time is worth a lot.
+
 ---
 
 # Why?
@@ -141,14 +215,87 @@ Isn't that the prototypical case where you want to move fast?
 .font500[🖥️🖥️🖥️🖥️🖥️🖥️] <br/>
 .font500[🖥️🖥️🖥️🖥️🖥️🖥️] <br/>
 
+???
+
+But what about when you're running it on a LOT of computers?
+
 ---
 
-# At scale...
+# At scale, even small savings add up...
 
 .center[.font500[💸]] <br/>
 
+???
+
+When you're running things at scale, even small improvements can save a LOT of money.
+
+Not just money: power. carbon.
+
 --
 .center[.font500[🌱]] <br/>
+
+---
+
+# ...and more so big savings
+
+### Optimizing 700 CPUs Away With Rust<sup>1</sup>
+
+> The Rust-based filter is much more efficient than the original implementation. With the ability to fully manage the heap allocations, Rust’s memory allocation for handling each datagram is kept to a minimum. This means that the Rust-based filter only needs a few MB of memory to operate. **As a result, we saw a 75% reduction in CPU usage and a 95% reduction in memory usage in production.**
+
+.citation[
+<sup>1</sup> [Medium article from Tenable tech blog, by Alan Ning](https://medium.com/tenable-techblog/optimizing-700-cpus-away-with-rust-dc7a000dbdb2) (emphasis mine)
+]
+
+---
+
+# It was even pretty easy to do
+
+Article continues:
+
+> With this small change, we were able to optimize away over 700 CPU and 300GB of memory. **This was all implemented, tested and deployed in a single sprint (two weeks).** Once the new filter was deployed, we were able to confirm the resource reduction in Datadog metrics.
+
+
+---
+
+# Revising goal
+
+Rust is the "go to" language for systems programming
+
+???
+
+Today, people reach for Rust to tackle the hardest problems. 
+
+Things like the rendering engine of a browser, or the core services that underlie the internet.
+
+---
+
+# Revising goal
+
+Rust is the "go to" language for ~~systems programming~~
+
+???
+
+But I think we could do more than that.
+
+--
+
+Rust is the "go to" language for systems that **run at scale**
+
+Rust is the "go to" language for systems where **reliability counts**
+
+???
+
+I think we could cover
+
+--
+
+.p50[![Galaxy brain](content/images/galaxy-brain.png)]
+
+---
+
+# What would that be like?
+
+
 
 ---
 
@@ -162,6 +309,18 @@ Isn't that the prototypical case where you want to move fast?
 *Savings from infra, maintenance*
 ]]
 
+???
+
+Ultimately, it comes down to a simple equation.
+
+Of course, when you dig in, things get a bit more complicated.
+
+As we've seen, the savings from using Rust can be substantial.
+
+It's not just resources: also maintenance.
+
+So, why doesn't everybody do this?
+
 ---
 
 # What is the cost to adopt Rust?
@@ -172,7 +331,13 @@ Isn't that the prototypical case where you want to move fast?
 (Rust 2019 Survey Results)
 ]
 
+???
 
+In a word, learning curve. For the tenable folks, Rust worked well. But we know that Rust is not working for a lot of people.
+
+Here is some data from the 2019 Survey. We didn't generate charts for this from the 2020 Survey, but I don't believe it has changed.
+
+In this question, we asked people how long until they felt productive. You can see that for many folks, it's less than a month, but there's a big chunk that say they don't feel productive yet. Well, they're probably all beginners, right?
 
 --
 
@@ -188,13 +353,27 @@ Isn't that the prototypical case where you want to move fast?
 (Rust 2019 Survey Results)
 ]
 
+???
+
+We thought the same thing, so we looked at how long people who said they didn't feel productive had been using Rust. Turns out-- quite a long time!
+
 --
 
 .fewmonths[![Arrow](content/images/Arrow.png)]
 
+???
+
+Many people use Rust for month a few months.
+
 --
 
 .neverproductive[![Arrow](content/images/Arrow.png)]
+
+???
+
+Even as long as three years! This is not great.
+
+If we want to get to the point where Rust is the 
 
 ---
 
@@ -205,6 +384,10 @@ Isn't that the prototypical case where you want to move fast?
 --
 
 .center[.font500[.font300[😲]]]
+
+???
+
+Yeah, it's ambitious.
 
 ---
 
@@ -232,7 +415,27 @@ Isn't that the prototypical case where you want to move fast?
 
 ![Building a shared vision for Async Rust](content/images/2021-07-17-Blog.png)
 
+???
+
+If you've been following Rust lately, you'll have noticed this effort around the async vision doc
+
+This is a kind of first attempt to apply the process I'm talking about, within a limited domain
+
+I expect that over the next few years we'll be repeating this experiment and this approach, trying to push ever further.
+
 ---
 
-# Async vision doc
+# Understand the problems
+
+???
+
+Going in, I thought I knew the problems around async.
+
+I knew there were composition problems between runtimes, for example, and I knew that we needed to do a fair bit of polish around the 
+
+
+
+---
+
+# 
 
