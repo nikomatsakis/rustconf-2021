@@ -27,6 +27,26 @@ count: false
 
 ---
 
+# 2011
+
+--
+
+.center[
+Rust started with the quixotic dream of delivering the
+
+## GREAT POWER OF C++
+
+<br/>
+*without the*
+
+## GREAT RESPONSIBILITY 
+
+<br/>
+that comes with it
+]
+
+---
+
 # Rust journey
 
 1. Show it can work
@@ -64,8 +84,14 @@ Yes, traditional "systems programming" targets:
 
 But also other domains, when used at scale:
 
-* Machine learning
 * Websites, day-to-day business logic
+* Machine learning
+
+---
+
+# Business logic, really?
+
+Isn't that the prototypical case where you want to move fast?
 
 ---
 
@@ -92,14 +118,83 @@ But also other domains, when used at scale:
 
 ---
 
-# What about the developer?
+# The equation
 
+.font150[.center[
+*Cost to adopt Rust*
 
+.font150[<]
+
+*Savings from infra, maintenance*
+]]
 
 ---
 
+# What is the cost to adopt Rust?
 
+.center[
+![Time to perceived user productivity](./content/images/8-How-Long-To-Be-Productive.svg)
+
+(Rust 2019 Survey Results)
+]
+
+
+
+--
+
+.notproductive[![Arrow](content/images/Arrow.png)]
 
 ---
 
-# Why not use Rust?
+# What is the cost to adopt Rust?
+
+.center[
+![How long to be productive](./content/images/22-unproductive-expertise.svg)
+
+(Rust 2019 Survey Results)
+]
+
+--
+
+.fewmonths[![Arrow](content/images/Arrow.png)]
+
+--
+
+.neverproductive[![Arrow](content/images/Arrow.png)]
+
+---
+
+# Our goal
+
+## Java to Rust in 3 weeks
+
+--
+
+.center[.font500[.font300[😲]]]
+
+---
+
+# How do we get there?
+
+--
+
+1. Understand the problems
+
+--
+
+2. Think about how we want Rust to feel
+
+--
+
+3. Take a step in that direction
+
+--
+
+4. Re-evaluate and proceed
+
+---
+
+# Async vision doc
+
+![Building a shared vision for Async Rust](content/images/2021-07-17-Blog.png)
+

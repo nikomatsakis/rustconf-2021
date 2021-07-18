@@ -37,6 +37,9 @@ h3 {
 .font300 {
   font-size: 300%;
 }
+.font150 {
+  font-size: 150%;
+}
 .small {
   font-size: 60%;
 }
@@ -105,12 +108,28 @@ td pre {
   -webkit-margin-after: 0.5em;
 }
 
-.bugzilla-arrow {
+.notproductive {
   position: absolute;
-  top: 180px;
-  left: 450px;
+  top: 475px;
+  left: 240px;
   width: 50px;
-  transform: rotate(45deg);
+  transform: rotate(270deg);
+}
+
+.fewmonths {
+  position: absolute;
+  top: 550px;
+  left: 325px;
+  width: 50px;
+  transform: rotate(270deg);
+}
+
+.neverproductive {
+  position: absolute;
+  top: 550px;
+  left: 750px;
+  width: 50px;
+  transform: rotate(270deg);
 }
 
 @page {
@@ -172,7 +191,7 @@ mark,
 }
 
 .no-hide .hidden {
-  display: inline;
+  display: inline;  
 }
 
 .black-background {
