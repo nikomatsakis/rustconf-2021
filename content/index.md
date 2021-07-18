@@ -254,10 +254,17 @@ Article continues:
 
 > With this small change, we were able to optimize away over 700 CPU and 300GB of memory. **This was all implemented, tested and deployed in a single sprint (two weeks).** Once the new filter was deployed, we were able to confirm the resource reduction in Datadog metrics.
 
+---
+
+# We've changed *who* does system programming
+
+![new generation](content/images/gogaruco.png)
+
+Yehuda Katz at Golden Gate Ruby Conference 2014
 
 ---
 
-# Revising goal
+# Let's change what systems programming *is*
 
 Rust is the "go to" language for systems programming
 
@@ -269,7 +276,7 @@ Things like the rendering engine of a browser, or the core services that underli
 
 ---
 
-# Revising goal
+# Let's change what systems programming *is*
 
 Rust is the "go to" language for ~~systems programming~~
 
@@ -279,23 +286,53 @@ But I think we could do more than that.
 
 --
 
-Rust is the "go to" language for systems that **run at scale**
+Rust is the "go to" language for systems that **run at scale**.
 
-Rust is the "go to" language for systems where **reliability counts**
+Rust is the "go to" language for systems where **reliability counts**.
 
 ???
 
-I think we could cover
+What if people were using Rust for anything that was going to run at scale, or for anything where reliability was really important?
+
+I mean...why not. I don't know about you, but I at least have found Rust displacing other languages I used to use, like Python. It's nothing against those languages, which are fantastic. It's just that Rust has a lot to offer: you get cargo and easy access to great libraries like serde. Moreover, when you wield Rust well, the code can be remarkably concise and clean. The borrow checker isn't much of a bother, because you can clone or box or do other things. And when you're done, your code runs fast. Even better, you can come back after six months and still do a successful refactoring.
 
 --
 
-.p50[![Galaxy brain](content/images/galaxy-brain.png)]
+.p40[![Galaxy brain](content/images/galaxy-brain.png)]
 
 ---
 
 # What would that be like?
 
+--
 
+Pretty dang great, that's what!
+
+--
+
+More people → More good ideas
+
+More good ideas → More people
+
+More people → More good ideas
+
+More good ideas → More people
+
+More people → More good ideas
+
+More good ideas → More people
+
+???
+
+So, if we managed that, what would it be like?
+
+I think it'd be fantastic. Rust has always been premised on the idea that great ideas are everywhere.
+
+The more people we can get working on Rust, the more great libraries we can have, and the more great ideas, the more we will all benefit.
+
+What's more, having more people using Rust leads to more adoption -- it's easier to hire.
+
+And, of course, we're also saving a lot of energy. Something I suspect many of us care about.
 
 ---
 
@@ -310,6 +347,8 @@ I think we could cover
 ]]
 
 ???
+
+OK, so let's get down to brass tacks. If we want to see Rust used in more places, for more things, what do we have to do?
 
 Ultimately, it comes down to a simple equation.
 
@@ -373,13 +412,17 @@ Many people use Rust for month a few months.
 
 Even as long as three years! This is not great.
 
-If we want to get to the point where Rust is the 
+If we want to get to the point where Rust is used for everything at scale. We have to do better. A lot better.
 
 ---
 
-# Our goal
+# What we should strive for
 
-## Java to Rust in 3 weeks
+## Productive in Rust in 3 weeks
+
+???
+
+I think we should be aiming for a learning curve where people are productive in Rust after just a few weeks.
 
 --
 
@@ -387,7 +430,7 @@ If we want to get to the point where Rust is the
 
 ???
 
-Yeah, it's ambitious.
+It's ambitious. We all know that Rust is 
 
 ---
 
@@ -431,11 +474,17 @@ I expect that over the next few years we'll be repeating this experiment and thi
 
 Going in, I thought I knew the problems around async.
 
-I knew there were composition problems between runtimes, for example, and I knew that we needed to do a fair bit of polish around the 
+I knew there were composition problems between runtimes, for example, and I knew that we needed to do a fair bit of polish around the compiler's error messages.
 
+--
+
+???
+
+But there was a lot I didn't know. Things that arose out of 
 
 
 ---
 
-# 
+# Does this mean that
 
+---
