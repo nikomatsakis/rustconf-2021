@@ -13,21 +13,36 @@ count: false
 
 # 2021
 
-- What a year
-- Rust foundation
-- Companies
+- Rust foundation launched! 🎉
+- Rust teams at many major companies!! 😲
+
+???
+
+* Banner year for Rust
+* Launched Foundation, so Rust has a stable home as it grows and moves toward sustainbility
+* Speaking of sustainability, multiple teams of multiple devs!
+* oh, and one other thing: linux kernel!
+* representative of Rust's growing usage in the foundational pieces of the computing world
+* so naturally I have a question for you all
+
+--
+- Rust in the linux kernel 🤯
 
 ---
 
-# 2011
+# Is...this it?
 
-- Plan:
-  - Control and performance predictability of C++
-  - Feel of a high-level language like JavaScript
+--
+
+Like, did we... make it?
 
 ---
 
-# 2011
+# 2015
+
+???
+
+But let's step back a minute, to 2015, when Rust 1.0 was released
 
 --
 
@@ -44,6 +59,21 @@ Rust started with the quixotic dream of delivering the
 <br/>
 that comes with it
 ]
+
+---
+
+# 2015
+
+- Plan:
+  - Control and performance predictability of C++
+  - Feel of a high-level language like JavaScript
+
+???
+
+* Rust 1.0 launched 6 years ago
+* The plan then was the same as it is now:
+  * Can we make a systems language that gives you all the control of C++
+  * 
 
 ---
 
@@ -71,6 +101,10 @@ C++         Rust
 
         JS, Ruby, Python
 ```
+
+???
+
+
 
 ---
 
@@ -197,4 +231,8 @@ Isn't that the prototypical case where you want to move fast?
 # Async vision doc
 
 ![Building a shared vision for Async Rust](content/images/2021-07-17-Blog.png)
+
+---
+
+# Async vision doc
 
