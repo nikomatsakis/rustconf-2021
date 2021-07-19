@@ -363,7 +363,7 @@ So, why doesn't everybody do this?
 
 ???
 
-In a word, learning curve. For the tenable folks, Rust worked well. But we know that Rust is not working for a lot of people.
+In a word, learning curve. For the Tenable folks, Rust worked well. But we know that Rust is not working for a lot of people.
 
 Here is some data from the 2019 Survey. We didn't generate charts for this from the 2020 Survey, but I don't believe it has changed.
 
@@ -503,64 +503,62 @@ But I CAN tell you that if we want to achieve that goal, if we want to make Rust
 
 ---
 
-# Async vision doc
-
-![Building a shared vision for Async Rust](content/images/2021-07-17-Blog.png)
-
-???
-
-If you've been following Rust lately, you'll have noticed this effort around the async vision doc
-
-This is a kind of first attempt to apply the process I'm talking about, within a limited domain.
-
-I expect that over the next few years we'll be repeating this experiment and this approach, trying to push ever further.
-
----
-
-# The vision doc process
-
-* Document and understand the *status quo*
-* Imagine a *shiny future*
-* Plot out the *roadmap* to get there
-
-???
-
-The vision doc really consists of three important parts.
-
-It started by understanding where you are right now. What are people doing with Rust? What problems are they encountering? For this, we have to 
-
-Going in, I thought I knew the problems around async.
-
-I knew there were composition problems between runtimes, for example, and I knew that we needed to do a fair bit of polish around the compiler's error messages.
+# What does Rust in 2024 feel like?
 
 --
-* While !satisfied:
-  * Take the first step
-  * Revise the goal if necessary
+
+**Reliable:** "if it compiles, it works, even when it's using threads or fancy patterns"
+
+--
+
+**Performant:** "ran well right out of the box, and I realized I needed `cargo run --release`"
+
+--
+
+**Empowering:** "complex stuff feels easy"
 
 ???
 
-Oh, one more thing.
+If you are a Rust user, you already know the answer.
+
 
 ---
 
-# Being focused and creative
+# Rust 2021 Edition
 
-* "It it compiles, it works"
 
----
+???
 
-# Thinking broadly
 
-* Tooling
-* Documentation
-* Ecosystem
 
 ---
 
-# Making scary changes 😱
+# What is this shiny future?
 
-* 
+* Key piece: better tooling and documentation!
+* Portability across runtimes
 
 ---
+
+# Improvements to Rust itself
+
+* Axsync functions in traits
+* Generators, async and otherwise.
+* And a heck of a lot of polish.
+
+???
+
+---
+
+# Benefits new and experienced users
+
+The "shiny future" rests on a lot of pieces:
+
+* Type alias impl trait: `type Foo = impl Bar`.
+* Impl trait in traits: `fn foo() -> impl Trait`.
+* Generic associated types: `type Foo<'a>`.
+* Const generics `SmallBox<22, T>`.
+* Improvements to `dyn` trait.
+
+???
 
