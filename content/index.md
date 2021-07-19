@@ -36,6 +36,15 @@ count: false
 
 Like, did we... make it?
 
+--
+
+.p50[
+![Ferris thinking](content/images/ferris_thinking.jpg)
+]
+
+.citation[
+  From [rochacbruno/rust_memes](https://github.com/rochacbruno/rust_memes)
+]
 ???
 
 I remember when I started to work on Rust, in 2011, I figured it was a doomed effort.
@@ -43,12 +52,6 @@ I remember when I started to work on Rust, in 2011, I figured it was a doomed ef
 I told myself that the first time I heard about some really cool thing and *only later* discovered it was written in Rust, that would be success. "Somebody using Rust that I don't know personally"
 
 Well, clearly we crossed *that* threshold, so I guess it's time to set a new goal.
-
---
-
-.center[.p50[
-![Back in time](https://media.giphy.com/media/ZSSoLmkYURcWqKFdVA/source.gif)
-]]
 
 ---
 
@@ -100,31 +103,19 @@ Ah yes, that's it!
 
 ---
 
-.center[
-Rust started with the quixotic dream of delivering the
+# Rust's charter
 
-## GREAT POWER OF C++
+Deliver the
 
-<br/>
-*without the*
+### Great power of C or C++
 
-## GREAT RESPONSIBILITY 
+with the
 
-<br/>
-that comes with it
-]
+### Great feel of JavaScript, Ruby, or Python
 
 ---
 
-# 2015
-
-- Plan:
-  - Control and performance predictability of C++
-  - Feel of a high-level language like JavaScript 
-
----
-
-# Rust journey
+# Rust's journey
 
 1. Show it can work (2015)
 
@@ -256,7 +247,7 @@ Article continues:
 
 ---
 
-# We've changed *who* does system programming
+# Not just changing *who* does system programming...
 
 ![new generation](content/images/gogaruco.png)
 
@@ -264,7 +255,7 @@ Yehuda Katz at Golden Gate Ruby Conference 2014
 
 ---
 
-# Let's change what systems programming *is*
+# ...but changing what systems programming *is*
 
 Rust is the "go to" language for systems programming
 
@@ -276,7 +267,7 @@ Things like the rendering engine of a browser, or the core services that underli
 
 ---
 
-# Let's change what systems programming *is*
+# ...but changing what systems programming *is*
 
 Rust is the "go to" language for ~~systems programming~~
 
@@ -306,7 +297,7 @@ I mean...why not. I don't know about you, but I at least have found Rust displac
 
 --
 
-Pretty dang great, that's what!
+Pretty dang great, that's what! 😁
 
 --
 
@@ -416,7 +407,7 @@ If we want to get to the point where Rust is used for everything at scale. We ha
 
 ---
 
-# What we should strive for
+# Goal:
 
 ## Productive in Rust in 3 weeks
 
@@ -430,27 +421,85 @@ I think we should be aiming for a learning curve where people are productive in 
 
 ???
 
-It's ambitious. We all know that Rust is 
+Yes. It's ambitious. But it's necessary, and I think we can do it. 
+
+---
+name: how-do-we-get-there-1
+
+# Upping our game
+
+* We need to be **focused**
+
+* We need to be **creative**
+
+???
+
+So, how are we going to get there? It won't be easy. We have to up our game.
 
 ---
 
-# How do we get there?
+# Being focused and creative
+
+???
+
+There is always so much going on in Rust. This is great. But it's also easy for us to get overwhelmed, with the result that sometimes it feels simultaneously like nothing is making progress *but so much is changing*.
+
+We need to keep our eye on the prize.
+
+---
+template: how-do-we-get-there-1
+name: how-do-we-get-there-2
+
+* We need to **think broadly**
+
+---
+
+# Thinking broadly
+
+Productivity is not just about the language or stdlib.
+
+Requires learning materials, tooling, and ecosystem.
+
+"Whole product thinking" has always been a "Rust thing", but it's going to be more important than ever.
+
+???
+
+If we want to make it possible to be productive in 3 weeks, we have to look at the things that people are trying to do and what is blocking them. Those are the problems to attack. They may not be where we expect. In fact, they probably aren't -- if they were, we might have attacked them already.
+
+---
+template: how-do-we-get-there-2
+name: how-do-we-get-there-3
+
+* We need to **make some scary changes**
+
+---
+
+# Making scary changes 😱
 
 --
 
-1. Understand the problems
+The "third rails" of Rust:
 
---
+* Recommending specific crates from the ecosystem
 
-2. Think about how we want Rust to feel
+* Allocation without an explicit keyword
 
---
+* Removing the `mut` keyword on `let` <sup>1</sup>
 
-3. Take a step in that direction
+Is it time to revisit some of those questions? Other questions?
 
---
+.footnote[
+   <sup>1</sup> aka [mutpocalypse](https://smallcultfollowing.com/babysteps/blog/2014/05/13/focusing-on-ownership/)
+]
+???
 
-4. Re-evaluate and proceed
+If we want new results, have to do new things.
+
+Here is a list of things that we have never done, and with good reason.
+
+I cannot tell you if revisiting any of these questions would make a difference in terms of "productivity in 3 weeks".
+
+But I CAN tell you that if we want to achieve that goal, if we want to make Rust a mainstream language, we are going to have to be willing re-examine some of our basic assumptions.
 
 ---
 
@@ -462,29 +511,56 @@ It's ambitious. We all know that Rust is
 
 If you've been following Rust lately, you'll have noticed this effort around the async vision doc
 
-This is a kind of first attempt to apply the process I'm talking about, within a limited domain
+This is a kind of first attempt to apply the process I'm talking about, within a limited domain.
 
 I expect that over the next few years we'll be repeating this experiment and this approach, trying to push ever further.
 
 ---
 
-# Understand the problems
+# The vision doc process
+
+* Document and understand the *status quo*
+* Imagine a *shiny future*
+* Plot out the *roadmap* to get there
 
 ???
+
+The vision doc really consists of three important parts.
+
+It started by understanding where you are right now. What are people doing with Rust? What problems are they encountering? For this, we have to 
 
 Going in, I thought I knew the problems around async.
 
 I knew there were composition problems between runtimes, for example, and I knew that we needed to do a fair bit of polish around the compiler's error messages.
 
 --
+* While !satisfied:
+  * Take the first step
+  * Revise the goal if necessary
 
 ???
 
-But there was a lot I didn't know. Things that arose out of 
+Oh, one more thing.
 
+---
+
+# Being focused and creative
+
+* "It it compiles, it works"
 
 ---
 
-# Does this mean that
+# Thinking broadly
+
+* Tooling
+* Documentation
+* Ecosystem
 
 ---
+
+# Making scary changes 😱
+
+* 
+
+---
+
