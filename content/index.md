@@ -511,11 +511,15 @@ But I CAN tell you that if we want to achieve that goal, if we want to make Rust
 
 --
 
-**Performant:** "ran well right out of the box, and I realized I needed `cargo run --release`"
+**Performant:** "ran well right out of the box! then I remembered `cargo run --release`, and it ran *really* well!"
 
 --
 
 **Empowering:** "complex stuff feels easy"
+
+--
+
+
 
 ???
 
