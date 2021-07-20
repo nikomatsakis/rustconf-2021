@@ -18,7 +18,104 @@
     * Safer internet
     * Save the planet
 
-# Outline
+# Narrative v1
+
+* Banner year for Rust!
+    * Launched Foundation
+    * Have teams at major companies
+    * Rust in the linux kernel
+* Is this...it? Did we... make it?
+* What was the ur-goal of Rust?
+* Rust's charter
+    * Great power of C, C++
+    * Great feel of JavaScript, Ruby, or Python
+* Cheesy graph
+    * C/C++
+    * JavaScript
+    * BANG: Rust
+* You can start to see that
+    * Tenable story
+* This is how Rust should FEEL
+    * Reliable
+    * Performant
+    * **Empowering**
+* But let's get real
+    * C/C++
+    * JavaScript
+    * WHIMPER: Rust-- definitely better, but not there
+* Survey data
+    * Some people just can't learn Rust
+* Rust: language where you have the hangover first
+    * Rust today IS Reliable, Performant, Empowering --- once you learn it
+    * Commonly hear people tell me
+        * At first I used Rust for X
+        * But then I rewrote my Python/Ruby/whatever script into Rust
+        * Got to use awesome packages from cargo
+        * It's great
+* Goals of Rust
+    * [x] Prove it can work 
+    * [x] Get adoption 
+    * [ ] Industry f!@#!$! standard <--- not there yet
+    * Reality:
+        * If we want to really get there, we have to do better. A lot better.
+* To get there:
+    * Today:
+        * Productive in Rust in 3 months
+    * Goal:
+        * Productive in Rust in 3 weeks
+* What would that do?
+    * Redefine *who* does systems programming
+    * Redefine what systems programming *even is*
+* What would that be like?
+    * Fucking great, that's what
+    * More ideas
+* What does it take?
+    * We need to be **focused**
+    * We need to be **creative**
+* Focused and creative
+    * Always ask ourselves, "Does this create the experience that we want?"
+    * Rust is trying to square a circle, it's hard. Really hard.
+    * Have to work backwards and forwards at once.
+* What does it take?
+    * We need to be **focused**
+    * We need to be **creative**
+    * We need to be **think broadly**
+* Go back to tenable. Look at this blog post.
+    * Look at all the pieces there
+    * In order to even do this experiment
+        * Rust
+        * Cargo
+        * Ecosystem pieces
+    * We need to think about the journey and put it all together
+* What does it take?
+    * We need to be **focused**
+    * We need to be **creative**
+    * We need to **think broadly**
+    * We need to **be brave**
+* Being brave
+    * Third rails of Rust
+* So what does Rust in 2024 feel like?
+* Been working on Async Vision Doc, let's look at that
+    * Async functions everywhere
+        * Today: poll methods
+        * Tomorrow: async methods
+    * Parallel async iterators
+        * (that work)
+    * Scopes
+* But also:
+    * Tooling
+    * Documentation
+* Does this mean we lose what Rust is?
+    * Au contraire. Achieving all this requires a bunch of work to get done
+        * Type alias impl trait
+        * Impl trait in traits
+        * Generic associated types
+        * Const generics
+* So here's to the next 3 years
+    * It's been a wild ride
+    * Buckle your seat belts, because it's going to get even crazier
+
+# Narrative v0
 
 ...
 

@@ -70,12 +70,6 @@ But let's step back a minute, to 2015...what happened that year...
 
 what happened in 2015...nope, not that...
 
---
-
-.center[
-![The dress](content/images/the-dress.jpg)
-]
-
 ---
 
 # 2015
@@ -131,8 +125,6 @@ with the
 ---
 
 # "Profit?"
-
-*Graph:* 
 
 ```
     │
