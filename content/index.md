@@ -45,55 +45,10 @@ Like, did we... make it?
 .citation[
   From [rochacbruno/rust_memes](https://github.com/rochacbruno/rust_memes)
 ]
-???
-
-I remember when I started to work on Rust, in 2011, I figured it was a doomed effort.
-
-I told myself that the first time I heard about some really cool thing and *only later* discovered it was written in Rust, that would be success. "Somebody using Rust that I don't know personally"
-
-Well, clearly we crossed *that* threshold, so I guess it's time to set a new goal.
-
----
-
-# 2015
 
 ???
 
-But let's step back a minute, to 2015...what happened that year...
-
-
----
-
-# 2015
-
-???
-
-what happened in 2015...nope, not that...
-
----
-
-# 2015
-
-.center[.p50[
-![Left shark](content/images/left-shark.png)
-]
-]
-
-???
-
-...nope, keep going, something else happened that year...
-
----
-
-# 2015
-
-.center[
-  ![Rust 1.0 announcement](content/images/2015-05-15-Blog.png)
-]
-
-???
-
-Ah yes, that's it!
+So like...have we done it? Are we done?
 
 ---
 
@@ -107,126 +62,82 @@ with the
 
 ### Great feel of JavaScript, Ruby, or Python
 
+???
+
+Well, let's go back. What was the "ur-goal" of Rust? What did we set out to do?
 ---
 
-# Rust's journey
-
-1. Show it can work (2015)
-
---
-2. Sustainability, adoption, production (2021)
-
---
-3. ???
-
---
-4. Profit (2024)
-
----
-
-# "Profit?"
+# Cheesy graph
 
 ```
-    │
-    │ C++             Rust
-    │
-    │               xx
-    │              xx
-    │             xx
-    │            xx
-    │           xx
-    │          xx
-    │        xx
-    │        x
-    │       x
-    │     xx         JS, Ruby, Python
-    │    xx
-    │
+ ^  |
+ |  |
+ P  │ C++   
+ e  │       
+ r  │       
+ f  │       
+ o  │       
+ r  │       
+ m  │       
+ a  │       
+ n  │       
+ c  │        
+ e  │        
+    │                JS, Ruby, Python
     └─────────────────────────────────
+           Productivity -->
 ```
 
 ???
 
-What happens if we truly achieve our dream?
+So if we view this as a graph, we kind of have C++
+way up there, really fast, but kind of hard to use
+correctly.
+
+Then we have JavaScript, Ruby, etc, way over there,
+productive, but not all that fast.
 
 ---
 
-# What does that look like?
+# BAM: Rust
 
-Yes, traditional "systems programming" targets:
+```
+ ^  |
+ |  |
+ P  │ C++                   RUST
+ e  │                     x
+ r  │                   x 
+ f  │                 x 
+ o  │               x
+ r  │             x
+ m  │           x
+ a  │         x
+ n  │       x  
+ c  │     x    
+ e  │   x     
+    │ x              JS, Ruby, Python
+    └─────────────────────────────────
+           Productivity -->
+```
 
-* Browsers
-* Foundational infrastructure
-* Kernel hacking
-
---
-
-But also other domains, when used at scale:
-
-* Websites, day-to-day business logic
-* Machine learning
-
----
-
-# Business logic, really?
+.bam-rust[
+  ![Rust logo](content/images/rust-logo-512x512.png)
+]
 
 ???
 
-Isn't that the prototypical case for agility?
-
-Isn't programmer time worth more than computer time?
-
---
-
-Yes.
+And then we have *bam* Rust. Best of both.
 
 ---
 
-# Why?
+# Let me tell you a story
 
-.font500[🖥️]
-
-???
-
-Well, it's true if you're running a program on one computer, programmer time is worth a lot.
-
----
-
-# Why?
-
-.font500[🖥️🖥️🖥️🖥️🖥️🖥️] <br/>
-.font500[🖥️🖥️🖥️🖥️🖥️🖥️] <br/>
-.font500[🖥️🖥️🖥️🖥️🖥️🖥️] <br/>
-
-???
-
-But what about when you're running it on a LOT of computers?
-
----
-
-# At scale, even small savings add up...
-
-.center[.font500[💸]] <br/>
-
-???
-
-When you're running things at scale, even small improvements can save a LOT of money.
-
-Not just money: power. carbon.
-
---
-.center[.font500[🌱]] <br/>
-
----
-
-# ...and more so big savings
-
-### Optimizing 700 CPUs Away With Rust<sup>1</sup>
+### <q>Optimizing 700 CPUs Away With Rust</q>
 
 > The Rust-based filter is much more efficient than the original implementation. With the ability to fully manage the heap allocations, Rust’s memory allocation for handling each datagram is kept to a minimum. This means that the Rust-based filter only needs a few MB of memory to operate. **As a result, we saw a 75% reduction in CPU usage and a 95% reduction in memory usage in production.**
 
 .citation[
-<sup>1</sup> [Medium article from Tenable tech blog, by Alan Ning](https://medium.com/tenable-techblog/optimizing-700-cpus-away-with-rust-dc7a000dbdb2) (emphasis mine)
+  [<q>Optimizing 700 CPUs Away With Rust</q>](https://medium.com/tenable-techblog/optimizing-700-cpus-away-with-rust-dc7a000dbdb2) -- Alan Ning, Tenable Techblog
 ]
 
 ---
@@ -236,6 +147,228 @@ Not just money: power. carbon.
 Article continues:
 
 > With this small change, we were able to optimize away over 700 CPU and 300GB of memory. **This was all implemented, tested and deployed in a single sprint (two weeks).** Once the new filter was deployed, we were able to confirm the resource reduction in Datadog metrics.
+
+.citation[
+  [<q>Optimizing 700 CPUs Away With Rust</q>](https://medium.com/tenable-techblog/optimizing-700-cpus-away-with-rust-dc7a000dbdb2) -- Alan Ning, Tenable Techblog
+]
+
+---
+
+# This is how should feel
+
+---
+
+# Reliable
+
+> .font150[<q>If it compiles, it works</q>]
+
+---
+
+# Performant
+
+> .font150[<q>It ran well right out of the box!</q>]
+
+--
+
+> .font150[<q>Then I remembered `cargo run --release`, and it ran *really* well!</q>]
+
+---
+
+# Above all: Empowering
+
+> .font150[<q>"Complex stuff feels easy"</q>]
+
+---
+name: lets-get-real
+
+# But let's get real
+
+```
+ ^  |
+ |  |
+ P  │ C++   
+ e  │       
+ r  │       
+ f  │       
+ o  │       
+ r  │       
+ m  │       
+ a  │       
+ n  │       
+ c  │        
+ e  │        
+    │                JS, Ruby, Python
+    └─────────────────────────────────
+           Productivity -->
+```
+
+---
+template: lets-get-real
+
+.bam-rust[
+  ![Rust logo](content/images/rust-logo-512x512.png)
+]
+
+---
+template: lets-get-real
+
+.transparent[
+.bam-rust[
+  ![Rust logo](content/images/rust-logo-512x512.png)
+]
+]
+
+.whimper-rust[
+  ![Rust logo](content/images/rust-logo-512x512.png)
+]
+
+---
+
+# Learning Rust takes time
+
+.center[
+![Time to perceived user productivity](./content/images/8-How-Long-To-Be-Productive.svg)
+
+(Rust 2019 Survey Results)
+]
+
+???
+
+In a word, learning curve. For the Tenable folks, Rust worked well. But we know that Rust is not working for a lot of people.
+
+Here is some data from the 2019 Survey. We didn't generate charts for this from the 2020 Survey, but I don't believe it has changed.
+
+In this question, we asked people how long until they felt productive. You can see that for many folks, it's less than a month, but there's a big chunk that say they don't feel productive yet. Well, they're probably all beginners, right?
+
+--
+
+.notproductive[![Arrow](content/images/Arrow.png)]
+
+---
+
+# Some folks never do
+
+.center[
+![How long have "not productive yet" folks been learning Rust?](./content/images/22-unproductive-expertise.svg)
+
+(Rust 2019 Survey Results)
+]
+
+???
+
+We thought the same thing, so we looked at how long people who said they didn't feel productive had been using Rust. Turns out-- quite a long time!
+
+--
+
+.fewmonths[![Arrow](content/images/Arrow.png)]
+
+???
+
+Many people use Rust for month a few months.
+
+--
+
+.neverproductive[![Arrow](content/images/Arrow.png)]
+
+???
+
+Even as long as three years! This is not great.
+
+If we want to get to the point where Rust is used for everything at scale. We have to do better. A lot better.
+
+---
+
+# Rust rocks 🎸...
+
+--
+
+## ...once you learn it 😬
+
+---
+
+# OMG so perfect
+
+<br/>
+<br/>
+<br/>
+
+"Rust: the language where you get the hangover first"
+
+-- Old Rust proverb <sup>1</sup>
+
+.citation[
+  <sup>1</sup> The person who said this to me said it was a quote from somewhere, but they didn't know where. Searching the web has only turned up references to the Rust game. HALP!
+]
+
+???
+
+I recently heard the best phrase ever to describe this. It is very true. Today, getting used to Rust still takes time. 
+
+Once you do, it's really rewarding.
+
+---
+
+# Don't know if you heard...<sup>1</sup>
+
+We're the, um, most loved language on Stack Overflow for like 100 years running now.
+
+Just sayin'.
+
+.citation[
+  <sup>1</sup> Actually, I'm pretty sure you did. That's the joke. Get it? See???
+]
+
+???
+
+The "most loved" question is "people using Rust want to keep using Rust". I know I do.
+
+I hear a lot of people saying "At first I used Rust to write some powerful thing. But then I had some old script I had written and I rewrote it in Rust. It turned out to be about the same length, but it runs faster, and it's easier for me to refactor it now." 
+
+The fact is, once you've got your groove in Rust, it's really great! You can grab packages from cargo! You can write high-level code like iterators, for loops, etc, and things run super fast!
+
+---
+
+# Goals of Rust
+
+* Prove it can work ✅
+
+--
+* Widespread adoption, sustainability ✅
+
+--
+* Become an industry standard ⏳
+
+---
+
+# How do we get there?
+
+--
+
+.center[
+.p60[
+![Evangelism](https://raw.githubusercontent.com/rochacbruno/rust_memes/master/img/strikeforce.jpg)
+]
+]
+
+.citation[
+  Seriously though, the whole Rust Evangelism Strike Force thing kind of annoys people. Don't do that.
+]
+
+---
+
+# How do we get there?
+
+### Today: Productive in Rust in 3 months
+
+### Goal: Productive in Rust in 3 weeks
+
+--
+
+.center[.font300[.font300[😲]]]
+
+---
+
+# What would that do?
 
 ---
 
@@ -318,104 +451,6 @@ What's more, having more people using Rust leads to more adoption -- it's easier
 And, of course, we're also saving a lot of energy. Something I suspect many of us care about.
 
 ---
-
-# The equation
-
-.font150[.center[
-*Cost to adopt Rust*
-
-.font150[<]
-
-*Savings from infra, maintenance*
-]]
-
-???
-
-OK, so let's get down to brass tacks. If we want to see Rust used in more places, for more things, what do we have to do?
-
-Ultimately, it comes down to a simple equation.
-
-Of course, when you dig in, things get a bit more complicated.
-
-As we've seen, the savings from using Rust can be substantial.
-
-It's not just resources: also maintenance.
-
-So, why doesn't everybody do this?
-
----
-
-# What is the cost to adopt Rust?
-
-.center[
-![Time to perceived user productivity](./content/images/8-How-Long-To-Be-Productive.svg)
-
-(Rust 2019 Survey Results)
-]
-
-???
-
-In a word, learning curve. For the Tenable folks, Rust worked well. But we know that Rust is not working for a lot of people.
-
-Here is some data from the 2019 Survey. We didn't generate charts for this from the 2020 Survey, but I don't believe it has changed.
-
-In this question, we asked people how long until they felt productive. You can see that for many folks, it's less than a month, but there's a big chunk that say they don't feel productive yet. Well, they're probably all beginners, right?
-
---
-
-.notproductive[![Arrow](content/images/Arrow.png)]
-
----
-
-# What is the cost to adopt Rust?
-
-.center[
-![How long to be productive](./content/images/22-unproductive-expertise.svg)
-
-(Rust 2019 Survey Results)
-]
-
-???
-
-We thought the same thing, so we looked at how long people who said they didn't feel productive had been using Rust. Turns out-- quite a long time!
-
---
-
-.fewmonths[![Arrow](content/images/Arrow.png)]
-
-???
-
-Many people use Rust for month a few months.
-
---
-
-.neverproductive[![Arrow](content/images/Arrow.png)]
-
-???
-
-Even as long as three years! This is not great.
-
-If we want to get to the point where Rust is used for everything at scale. We have to do better. A lot better.
-
----
-
-# Goal:
-
-## Productive in Rust in 3 weeks
-
-???
-
-I think we should be aiming for a learning curve where people are productive in Rust after just a few weeks.
-
---
-
-.center[.font500[.font300[😲]]]
-
-???
-
-Yes. It's ambitious. But it's necessary, and I think we can do it. 
-
----
 name: how-do-we-get-there-1
 
 # Upping our game
@@ -432,11 +467,17 @@ So, how are we going to get there? It won't be easy. We have to up our game.
 
 # Being focused and creative
 
+Always be asking: How do we want Rust to feel?
+
+Is this the best we can do?
+
 ???
 
-There is always so much going on in Rust. This is great. But it's also easy for us to get overwhelmed, with the result that sometimes it feels simultaneously like nothing is making progress *but so much is changing*.
+We always have to be asking ourselves: what is the experience we are trying to create? Have we achieved it?
 
-We need to keep our eye on the prize.
+Rust is trying to square a circle. It's hard, really hard.
+
+We have to work backwards from the experience we want, and forwards from what we know how to do at once.
 
 ---
 template: how-do-we-get-there-1
@@ -447,6 +488,30 @@ name: how-do-we-get-there-2
 ---
 
 # Thinking broadly
+
+### <q>Building a microservice with Rust</q>
+
+> We decided to run an experiment and create a simple microservice written in Rust to see for ourselves if it’s worth it. The thinking was: if we failed, we would learn something useful anyway, if we succeeded, we would add a new awesome device to our team’s toolbox.
+
+.citation[
+  ["Building a microservice with Rust"](https://medium.com/tenable-techblog/building-a-microservice-with-rust-23a4de6e5e14) -- Mikhail Medvedev, Tenable Techblog
+]
+
+---
+
+# Thinking broadly
+
+> Pieces of the puzzle
+>
+> A typical microservice is made of:
+> * HTTP API
+> * Code to work with the database
+> * Code to read messages from a queue, such as Kafka.
+> * A Dockerfile
+>
+> ...
+
+---
 
 Productivity is not just about the language or stdlib.
 

@@ -13,6 +13,7 @@ h3 {
   font-family: "Fraunces";
   font-weight: normal;
 }
+
 .remark-code,
 .remark-inline-code {
   font-family: "JetBrains Mono";
@@ -25,6 +26,16 @@ h3 {
   font-size: 25px;
   padding: 0em 2em 0em 2em;
 }
+
+blockquote {
+  /* font: 14px/22px normal helvetica, sans-serif;*/
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  padding-left: 15px;
+  border-left: 7px solid #ccc;
+} 
+
 .grey {
   color: grey;
 }
@@ -254,6 +265,10 @@ mark,
   width: 40%;
 }
 
+.p25 img {
+  width: 25%;
+}
+
 .p100 img {
   width: 100%;
   height: auto;
@@ -267,4 +282,24 @@ mark,
   position: absolute;
   bottom: 20px;
   right: 20px;
+}
+
+.bam-rust {
+  position: absolute;
+  top: 70px;
+  left: 300px;
+  width: 25%;
+  height: auto;
+}
+
+.whimper-rust {
+  position: absolute;
+  top: 125px;
+  left: 200px;
+  width: 10%;
+  height: auto;
+}
+
+.transparent {
+  opacity: 30%;
 }
