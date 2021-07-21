@@ -665,6 +665,8 @@ If we want to make it possible to be productive in 3 weeks, we have to look at t
 
 ---
 template: how-do-we-get-there-2
+
+--
 name: how-do-we-get-there-3
 
 * We need to **be bold**
@@ -737,11 +739,7 @@ In Rust 2018: error. 😢
 
 In Rust 2021: works! 🎉
 
-Shoutout to the [RFC 2229 project group](https://www.rust-lang.org/governance/teams/compiler#wg-rfc-2229)<sup>1</sup> for their hard work on this over the last year!
-
-.citation[
-  <sup>1</sup> Aman Arora, Archer Zhang, Chris Pardy, Dhruv Jauhar, Jennifer Willis, logmosier, Roxane. Y'all rock!
-]
+Shoutout to the [RFC 2229 project group](https://www.rust-lang.org/governance/teams/compiler#wg-rfc-2229) for their hard work on this over the last year: Aman Arora, Archer Zhang, Chris Pardy, Dhruv Jauhar, Jennifer Willis, logmosier, Roxane. Y'all rock!
 
 ---
 
