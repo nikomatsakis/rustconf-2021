@@ -631,7 +631,7 @@ We drafted a vision doc for Async Rust. This process began by talking to lots of
 
 > Consistent: <q>just add async/await</q>
 >
-> Async Rust should be a small delta atop Sync Rust. People who are familiar with sync Rust should be able to leverage what they know to make adopting Async Rust straightforward. Porting a sync code base to async should be relatively smooth: just add async/await, adopt the async variants of the various libraries, and you're done.
+> Async Rust should be a small delta atop Sync Rust.
 
 ---
 
@@ -649,7 +649,7 @@ trait Iterator {
 
 ---
 
-# Compare to today's `Stream` trait
+# Today's `Stream` trait
 
 Asynchronous iterator trait, today:
 
