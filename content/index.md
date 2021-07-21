@@ -512,7 +512,7 @@ Yehuda Katz at Golden Gate Ruby Conference 2014
 
 # ...but changing what systems programming *is*
 
-Rust is the <q>go to</q> language for systems programming
+Rust is the <q>go to</q> language for critical systems
 
 ???
 
@@ -524,7 +524,7 @@ Things like the rendering engine of a browser, or the core services that underli
 
 # ...but changing what systems programming *is*
 
-Rust is the <q>go to</q> language for ~~systems programming~~
+Rust is the <q>go to</q> language for ~~critical systems~~
 
 ???
 
@@ -558,7 +558,11 @@ Pretty dang great, that's what! 😁
 
 More people → More good ideas
 
+--
+
 More good ideas → More people
+
+--
 
 More people → More good ideas
 
@@ -612,11 +616,9 @@ Rust is trying to square a circle. It's hard, really hard.
 We have to work backwards from the experience we want, and forwards from what we know how to do at once.
 
 ---
-
-# Rust design principles
-
----
 template: how-do-we-get-there-1
+
+--
 name: how-do-we-get-there-2
 
 * We need to **think broadly**
