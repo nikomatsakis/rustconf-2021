@@ -31,11 +31,7 @@ count: false
 * What's more, many of those companies have created their own Rust teams.
 
 --
-- Rust in the linux kernel <sup>1</sup> 🤯
-
-.citation[
-<sup>1</sup> Caveat: OK, maybe not quite. But perhaps soon!
-]
+- Rust under consideration for the linux kernel 🤯
 
 ???
 
