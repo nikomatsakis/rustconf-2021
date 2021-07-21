@@ -705,7 +705,15 @@ The <q>shiny future</q> rests on a lot of pieces:
 * Const generics `SmallBox<22, T>`.
 * Improvements to `dyn` trait.
 
+---
+
+# Beyond Rust lang
+
+Tokio console
+
 ???
+
+docs
 
 ---
 
