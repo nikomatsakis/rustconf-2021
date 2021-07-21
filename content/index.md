@@ -176,7 +176,7 @@ Article continues:
 
 # Above all: Empowering
 
-> .font150[<q>"Complex stuff feels easy"</q>]
+> .font150[<q>Complex stuff feels easy</q>]
 
 ---
 name: lets-get-real
@@ -292,7 +292,7 @@ If we want to get to the point where Rust is used for everything at scale. We ha
 <br/>
 <br/>
 
-"Rust: the language where you get the hangover first"
+<q>Rust: the language where you get the hangover first</q>
 
 -- Old Rust proverb <sup>1</sup>
 
@@ -302,9 +302,9 @@ If we want to get to the point where Rust is used for everything at scale. We ha
 
 ???
 
-I recently heard the best phrase ever to describe this. It is very true. Today, getting used to Rust still takes time. 
+I recently heard the best phrase ever to describe this. It is very true. Today, getting used to Rust still takes time. Once you do, though, it's really rewarding.
 
-Once you do, it's really rewarding.
+The metaphor works the other way too: with a lot of languages, everything feels great at first, but the hangover comes when you try to manage the maintenance or the bugs.
 
 ---
 
@@ -382,7 +382,7 @@ Yehuda Katz at Golden Gate Ruby Conference 2014
 
 # ...but changing what systems programming *is*
 
-Rust is the "go to" language for systems programming
+Rust is the <q>go to</q> language for systems programming
 
 ???
 
@@ -394,7 +394,7 @@ Things like the rendering engine of a browser, or the core services that underli
 
 # ...but changing what systems programming *is*
 
-Rust is the "go to" language for ~~systems programming~~
+Rust is the <q>go to</q> language for ~~systems programming~~
 
 ???
 
@@ -402,9 +402,9 @@ But I think we could do more than that.
 
 --
 
-Rust is the "go to" language for systems that **run at scale**.
+Rust is the <q>go to</q> language for systems that **run at scale**.
 
-Rust is the "go to" language for systems where **reliability counts**.
+Rust is the <q>go to</q> language for systems where **reliability counts**.
 
 ???
 
@@ -469,7 +469,9 @@ So, how are we going to get there? It won't be easy. We have to up our game.
 
 Always be asking: How do we want Rust to feel?
 
-Is this the best we can do?
+* Reliable: <q>if it compiles, it works</q>
+* Performant: <q>ran well right out of the box!</q>
+* Empowering: <q>complex stuff feels easy</q>
 
 ???
 
@@ -478,6 +480,10 @@ We always have to be asking ourselves: what is the experience we are trying to c
 Rust is trying to square a circle. It's hard, really hard.
 
 We have to work backwards from the experience we want, and forwards from what we know how to do at once.
+
+---
+
+# Rust design principles
 
 ---
 template: how-do-we-get-there-1
@@ -494,7 +500,7 @@ name: how-do-we-get-there-2
 > We decided to run an experiment and create a simple microservice written in Rust to see for ourselves if it’s worth it. The thinking was: if we failed, we would learn something useful anyway, if we succeeded, we would add a new awesome device to our team’s toolbox.
 
 .citation[
-  ["Building a microservice with Rust"](https://medium.com/tenable-techblog/building-a-microservice-with-rust-23a4de6e5e14) -- Mikhail Medvedev, Tenable Techblog
+  [<q>Building a microservice with Rust</q>](https://medium.com/tenable-techblog/building-a-microservice-with-rust-23a4de6e5e14) -- Mikhail Medvedev, Tenable Techblog
 ]
 
 ---
@@ -513,11 +519,13 @@ name: how-do-we-get-there-2
 
 ---
 
+# Thinking broadly
+
 Productivity is not just about the language or stdlib.
 
 Requires learning materials, tooling, and ecosystem.
 
-"Whole product thinking" has always been a "Rust thing", but it's going to be more important than ever.
+<q>Whole product thinking</q> has always been a <q>Rust thing</q>, but it's going to be more important than ever.
 
 ???
 
@@ -527,15 +535,13 @@ If we want to make it possible to be productive in 3 weeks, we have to look at t
 template: how-do-we-get-there-2
 name: how-do-we-get-there-3
 
-* We need to **make some scary changes**
+* We need to **be bold**
 
 ---
 
-# Making scary changes 😱
+# Being bold
 
---
-
-The "third rails" of Rust:
+The <q>third rails</q> of Rust: 😱
 
 * Recommending specific crates from the ecosystem
 
@@ -548,6 +554,7 @@ Is it time to revisit some of those questions? Other questions?
 .footnote[
    <sup>1</sup> aka [mutpocalypse](https://smallcultfollowing.com/babysteps/blog/2014/05/13/focusing-on-ownership/)
 ]
+
 ???
 
 If we want new results, have to do new things.
@@ -560,60 +567,137 @@ But I CAN tell you that if we want to achieve that goal, if we want to make Rust
 
 ---
 
-# What does Rust in 2024 feel like?
+# Rust 2021 Edition
 
---
+Rust's second edition.
 
-**Reliable:** "if it compiles, it works, even when it's using threads or fancy patterns"
+Editions let us make otherwise impossible changes.
 
---
+As always, we don't split the ecosystem:
 
-**Performant:** "ran well right out of the box! then I remembered `cargo run --release`, and it ran *really* well!"
-
---
-
-**Empowering:** "complex stuff feels easy"
-
---
-
-
-
-???
-
-If you are a Rust user, you already know the answer.
-
+* Crates using Rust 2021 fully interoperate with crates using Rust 2018 and even Rust 2015.
+* Tooling handles the migration for you.
 
 ---
 
 # Rust 2021 Edition
 
+## Enabling better format strings
+
+```rust
+let mut x = 22;
+println!("{x}");
+```
+
+---
+
+# Rust 2021 Edition
+
+## Changing closure captures
+
+```rust
+let tuple = (String::new(), String::new());
+let print_0 = move || println!("{}", tuple.0);
+let print_1 = move || println!("{}", tuple.1);
+```
+
+---
+
+# What does Rust in 2024 feel like?
+
+--
+
+Uh, I don't know yet.
+
+--
+
+But we're gonna figure it out!
+
+---
+
+# Async vision doc
+
+![2021-07-17](content/images/2021-07-17-Blog.png)
 
 ???
 
+Earlier this year we undertook a new kind of exercise.
 
-
----
-
-# What is this shiny future?
-
-* Key piece: better tooling and documentation!
-* Portability across runtimes
+We drafted a vision doc for Async Rust. This process began by talking to lots of Async Rust users about their experiences, both good and bad. We then brainstormed out possible ways to address the gaps we saw and came up with a roadmap for the work we expect to do over the next year or two.
 
 ---
 
-# Improvements to Rust itself
+# How async Rust should feel
 
-* Axsync functions in traits
-* Generators, async and otherwise.
-* And a heck of a lot of polish.
-
-???
+> Consistent: <q>just add async/await</q>
+>
+> Async Rust should be a small delta atop Sync Rust. People who are familiar with sync Rust should be able to leverage what they know to make adopting Async Rust straightforward. Porting a sync code base to async should be relatively smooth: just add async/await, adopt the async variants of the various libraries, and you're done.
 
 ---
 
-# Benefits new and experienced users
+# Not always true today
 
-The "shiny future" rests on a lot of pieces:
+Synchronous iterator trait:
+
+```rust
+trait Iterator {
+  type Item;
+
+  fn next(&mut self) -> Option<Self::Item>;
+}
+```
+
+---
+
+# Compare to today's `Stream` trait
+
+Asynchronous iterator trait, today:
+
+```rust
+trait Stream {
+  type Item;
+
+  fn poll_next(
+    self: Pin<&mut self>
+  ) -> Poll<Option<Self::Item>>;
+}
+```
+
+---
+
+# Where we are headed
+
+Asynchronous iterator trait, tomorrow:
+
+```rust
+trait AsyncIterator {
+  type Item;
+
+  async fn next(&mut self) -> Option<Self::Item>;
+}
+```
+
+---
+
+# Not good enough?
+
+Considering generator syntax:
+
+```rust
+async fn* add_one(
+  input: impl AsyncIterator<Item = u32>
+) yield u32 {
+  while let Some(i) = input.next().await {
+    yield i + 1;
+  }
+}
+```
+
+---
+
+# Benefits all users alike
+
+The <q>shiny future</q> rests on a lot of pieces:
 
 * Type alias impl trait: `type Foo = impl Bar`.
 * Impl trait in traits: `fn foo() -> impl Trait`.
@@ -623,3 +707,10 @@ The "shiny future" rests on a lot of pieces:
 
 ???
 
+---
+
+# In closing...
+
+* Future so bright, you gotta wear 😎
+* Rust is seeing more use, and more investment, than ever before.
+* Rust is going to get both easier to learn and more powerful.
