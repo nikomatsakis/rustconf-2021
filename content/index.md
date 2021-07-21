@@ -14,29 +14,47 @@ count: false
 # 2021
 
 - Rust foundation launched! 🎉
+- Platinum sponsors: 
+  - AWS, Google, Huawei, Microsoft, Mozilla, Facebook
+
+???
+
+* 2021 saw Rust go from a project primarily supporting by one company, Mozilla, to having its own Foundation with, at current count, 6 platinum sponsors!
+* These include many of the biggest names in computing.
+* Not bad.
+
+--
 - Rust teams at many major companies!! 😲
 
 ???
 
-* Banner year for Rust
-* Launched Foundation, so Rust has a stable home as it grows and moves toward sustainbility
-* Speaking of sustainability, multiple teams of multiple devs!
-* oh, and one other thing: linux kernel!
-* representative of Rust's growing usage in the foundational pieces of the computing world
-* so naturally I have a question for you all
+* What's more, many of those companies have created their own Rust teams.
 
 --
-- Rust in the linux kernel 🤯
+- Rust in the linux kernel <sup>1</sup> 🤯
+
+.citation[
+<sup>1</sup> Caveat: OK, maybe not quite. But perhaps soon!
+]
+
+???
+
+* And if *that* wasn't enough, what about Rust being considered for the linux kernel?
+* So, given all that, I have one question for you...
 
 ---
 
-# Is...this it?
+# Are we there yet?
+
+Is this... it?
+
+???
+
+* Is this it?
 
 --
 
-Like, did we... make it?
-
---
+Did we... make it?
 
 .p50[
 ![Ferris thinking](content/images/ferris_thinking.jpg)
@@ -48,7 +66,8 @@ Like, did we... make it?
 
 ???
 
-So like...have we done it? Are we done?
+* Did we...make it?
+* To answer that question, let's go back in time. What was the "ur-goal" of Rust? What did we set out to do when we started on this journey?
 
 ---
 
@@ -64,7 +83,8 @@ with the
 
 ???
 
-Well, let's go back. What was the "ur-goal" of Rust? What did we set out to do?
+Rust's goal has always been to "have our cake and eat it to". We want to combine the great power of C++ with the high-level feeling of a language like JavaScript, Ruby, or Python.
+
 ---
 
 # Cheesy graph
@@ -158,12 +178,6 @@ Article continues:
 
 ---
 
-# Reliable
-
-> .font150[<q>If it compiles, it works</q>]
-
----
-
 # Performant
 
 > .font150[<q>It ran well right out of the box!</q>]
@@ -174,9 +188,23 @@ Article continues:
 
 ---
 
+# Reliable
+
+> .font150[<q>If it compiles, it works</q>]
+
+---
+
 # Above all: Empowering
 
 > .font150[<q>Complex stuff feels easy</q>]
+
+???
+
+When Rust is really working right, it makes what used to be complicated stuff just feel simple.
+
+You want to parallelize that loop? Do it!
+
+You want to use nifty new kernel APIs like io-uring? Do it!
 
 ---
 name: lets-get-real
@@ -209,6 +237,10 @@ template: lets-get-real
   ![Rust logo](content/images/rust-logo-512x512.png)
 ]
 
+???
+
+* If this is what we're shooting for... the performance of C++ with the productivity of JavaScript, I don't think we're quite there.
+
 ---
 template: lets-get-real
 
@@ -222,6 +254,12 @@ template: lets-get-real
   ![Rust logo](content/images/rust-logo-512x512.png)
 ]
 
+???
+
+* We're more like here. We've got the great performance. 
+* The productivity can be really high, especially for complex tasks. 
+* But on the whole, you just can't claim that Rust is as easy to use as JavaScript or Python. Or even close.
+
 ---
 
 # Learning Rust takes time
@@ -234,19 +272,41 @@ template: lets-get-real
 
 ???
 
-In a word, learning curve. For the Tenable folks, Rust worked well. But we know that Rust is not working for a lot of people.
+I mean, let's look at the survey results. This chart is from 2019 -- I didn't have ready access to a chart from 2020, but I'm sure the results are comparable.
 
-Here is some data from the 2019 Survey. We didn't generate charts for this from the 2020 Survey, but I don't believe it has changed.
+Here, we asked people how long it took until they felt productive using Rust.
 
-In this question, we asked people how long until they felt productive. You can see that for many folks, it's less than a month, but there's a big chunk that say they don't feel productive yet. Well, they're probably all beginners, right?
+--
+
+.lessthanamonth[![Arrow](content/images/Arrow.png)]
+
+???
+
+You can see there's a good chunk of people that pick up Rust fairly quickly. These might be the tenable folks: they're able to get productive in a month or so, and build from there.
+
+Trust me, without all the hard work that we've put into careful design, error messages, documentation, and the like, this number would be a lot smaller.
+
+--
+
+.lessthanayear[![Arrow](content/images/Arrow.png)]
+
+???
+
+None the less, for even more people, getting productive in Rust was measured not in weeks, but in months. 
 
 --
 
 .notproductive[![Arrow](content/images/Arrow.png)]
 
+???
+
+In fact, there's a pretty decent chunk of people who claim they've never felt productive!
+
+Now you might be thinking, I bet those people who don't feel productive are all beginners who just haven't learned Rust yet, right?
+
 ---
 
-# Some folks never do
+# Some folks just never learn
 
 .center[
 ![How long have "not productive yet" folks been learning Rust?](./content/images/22-unproductive-expertise.svg)
@@ -256,7 +316,9 @@ In this question, we asked people how long until they felt productive. You can s
 
 ???
 
-We thought the same thing, so we looked at how long people who said they didn't feel productive had been using Rust. Turns out-- quite a long time!
+Wrong.
+
+We thought the same thing, so we looked at how long people who said they didn't feel productive had been using Rust.
 
 --
 
@@ -264,7 +326,7 @@ We thought the same thing, so we looked at how long people who said they didn't 
 
 ???
 
-Many people use Rust for month a few months.
+For many of them, it's a few months. Now, you could call that a beginner, although I think it shoudln't take months to feel productive in a language.
 
 --
 
@@ -272,17 +334,25 @@ Many people use Rust for month a few months.
 
 ???
 
-Even as long as three years! This is not great.
+But for most folks it was longer. Some of them had been using Rust for more than 3 years!
 
-If we want to get to the point where Rust is used for everything at scale. We have to do better. A lot better.
+If we want to truly want people to feel as productive in Rust as they do in Python -- and I do -- we have got to do better. A lot better.
 
 ---
 
 # Rust rocks 🎸...
 
+???
+
+The fact is, Rust really rocks...
+
 --
 
 ## ...once you learn it 😬
+
+???
+
+...once you learn it! But that can be quite difficult.
 
 ---
 
@@ -302,45 +372,91 @@ If we want to get to the point where Rust is used for everything at scale. We ha
 
 ???
 
-I recently heard the best phrase ever to describe this. It is very true. Today, getting used to Rust still takes time. Once you do, though, it's really rewarding.
+I recently heard the best phrase ever to describe this. "Rust is the language where you get the hangover first". This is perfect on so many levels.
 
-The metaphor works the other way too: with a lot of languages, everything feels great at first, but the hangover comes when you try to manage the maintenance or the bugs.
+First, the obvious: that getting used to Rust takes time, but once you're past the hangover, you feel like you have a new pair of wings. It's a lot easier to build and maintain ambitious projects. And actually, not just ambitious ones. 
+
+Once you've got your groove in Rust, it's really great! You can grab packages from cargo, write high-level code with iterators and closures a nifty APIs, and things run super fast!
+
+I hear a lot of people saying "At first I used Rust to write the powerful project. But then I had this old script I had written and I needed to modify it. It seemed easier to just rewrite it in Rust. The code is about the same length, but now it runs faster, and I'm not afraid to come back to it and change it later."
+
+And this is exactly why this metaphor is awesome: it works the other way, too. In a lot of languages, everything feels great at first, but the hangover comes when you try to manage the maintenance.
 
 ---
 
 # Don't know if you heard...<sup>1</sup>
 
-We're the, um, most loved language on Stack Overflow for like 100 years running now.
+We're the <q>most loved</q> language on Stack Overflow for like 100 years running now.<sup>2</sup>
 
 Just sayin'.
 
 .citation[
-  <sup>1</sup> Actually, I'm pretty sure you did. That's the joke. Get it? See???
+  <sup>1</sup> Actually, I'm pretty sure you did. That's the joke. Get it? See??? <br/>
+
+  <sup>2</sup> Oh dear! This slide is sure to bring bad luck. No way that we will win next year *now*.
 ]
 
 ???
 
-The "most loved" question is "people using Rust want to keep using Rust". I know I do.
-
-I hear a lot of people saying "At first I used Rust to write some powerful thing. But then I had some old script I had written and I rewrote it in Rust. It turned out to be about the same length, but it runs faster, and it's easier for me to refactor it now." 
-
-The fact is, once you've got your groove in Rust, it's really great! You can grab packages from cargo! You can write high-level code like iterators, for loops, etc, and things run super fast!
+And I think this is why Rust keeps winning the "most loved" question on stack overflow year after year. The question asks people using Rust if they want to keep using Rust -- and they do!
 
 ---
 
-# Goals of Rust
+# Just don't look at "most popular"
 
-* Prove it can work ✅
+| Language | Percent |
+| --- | --- |
+| 1. JavaScript | 67% |
+| 2. HTML/CSS | 63% |
+| 3. SQL | 54% |
+| 4. Python | 44% |
+| 5. Java | 40% |
+| ... | ... |
+| 19. Rust | 5% |
+
+Upside: Lots of room to grow!
+
+???
+
+Of course, it you look at the other questions, Rust doesn't do as well. When it comes to the widely used, we come in at 5%. Which is actually pretty good -- much better than I ever expected. But I think Rust deserves to be used more.
+
+---
+
+# Are we there yet?
+
+???
+
+So to come back to my original question. Are we there yet? No, not yet, but we've come a long way.
 
 --
-* Widespread adoption, sustainability ✅
+
+* 2015: Prove it can work ✅
+
+???
+
+The first big step was 1.0, in 2015, where we showed that the basic approach of Rust -- ownership and borrowing -- worked.
 
 --
-* Become an industry standard ⏳
+* 2021: Critical adoption, sustainability ✅
+
+???
+
+The next milestone I think we passed this year. We've seen Rust adoption grow to the point where it is used in many critical systems. We're seeing more and more Rust developers being hired to work on the project, which will help us grow faster and be more sustainable.
+
+--
+* 202X: Widespread usage: become an industry standard ⏳
+
+???
+
+So what's next? Where are we headed? I think our next goal is to see Rust in widespread use. I don't expect Rust to be used everywhere, but I think there remain quite a lot of applications where Rust's combation of performance and productivity would be a really good fit. If they could just learn it.
 
 ---
 
 # How do we get there?
+
+???
+
+So, how do we get there?
 
 --
 
@@ -354,13 +470,27 @@ The fact is, once you've got your groove in Rust, it's really great! You can gra
   Seriously though, the whole Rust Evangelism Strike Force thing kind of annoys people. Don't do that.
 ]
 
+???
+
+Rust evangelism strike force! Well, maybe not. Just hectoring people  into using Rust is probably not going to do the trick.
+
 ---
 
 # How do we get there?
 
-### Today: Productive in Rust in 3 months
+### Today: Productive in Rust in 6 months (or more)
 
-### Goal: Productive in Rust in 3 weeks
+???
+
+What about this. What if instead of people taking 6 months to feel productive in Rust...
+
+--
+
+### Goal: Productive in Rust in 6 weeks (or less)
+
+???
+
+What if it took six weeks?
 
 --
 
@@ -569,18 +699,16 @@ But I CAN tell you that if we want to achieve that goal, if we want to make Rust
 
 # Rust 2021 Edition
 
-Rust's second edition.
-
-Editions let us make otherwise impossible changes.
+**Editions let us make otherwise impossible changes.**
 
 As always, we don't split the ecosystem:
 
-* Rust 2021 fully interoperate with Rust 2018 and Rust 2015.
+* Rust 2021 fully interoperates with Rust 2018 and Rust 2015.
 * Tooling handles the migration for you.
 
 ---
 
-# Rust 2021 Edition
+# Rust 2021 Edition: Highlights
 
 ## Enabling better format strings
 
@@ -589,9 +717,11 @@ let mut x = 22;
 println!("{x}");
 ```
 
+Shoutout to Mara Bos (next speaker!) for driving that process!
+
 ---
 
-# Rust 2021 Edition
+# Rust 2021 Edition: Highlights
 
 ## Changing closure captures
 
@@ -601,17 +731,37 @@ let print_0 = move || println!("{}", tuple.0);
 let print_1 = move || println!("{}", tuple.1);
 ```
 
+In Rust 2018: error. 😢
+
+In Rust 2021: works! 🎉
+
+Shoutout to the [RFC 2229 project group](https://www.rust-lang.org/governance/teams/compiler#wg-rfc-2229)<sup>1</sup> for their hard work on this over the last year!
+
+.citation[
+  <sup>1</sup> Aman Arora, Archer Zhang, Chris Pardy, Dhruv Jauhar, Jennifer Willis, logmosier, Roxane. Y'all rock!
+]
+
 ---
 
-# What does Rust in 2024 feel like?
+# More shoutouts
 
---
+| Feature | Hero(es) |
+| --- | --- |
+| New prelude | Dirkjan Ochtman, jam1garner |
+| Cargo feature resolver | Eric Huss |
+| IntoIterator for arrays | cuviper |
+| Or patterns | mark-i-m, hi-rustin |
+| Reserved syntax | bstrie, lrh2000 |
+| General assistance | Ryan Levick, Manish Goregaokar, |
+| | Mark Rousskov  |
 
-Uh, I don't know yet.
+Y'all rock too.
 
---
-
-But we're gonna figure it out!
+.citation[
+  I couldn't fit all the people who worked on these features on this slide,
+  so I tried to select the folks who did the most work specifically related to the Edition.
+  Hopefully I didn't forget anyone! 💜
+]
 
 ---
 
@@ -621,7 +771,7 @@ But we're gonna figure it out!
 
 ???
 
-Earlier this year we undertook a new kind of exercise.
+Earlier this year, Tyler and I undertook a new kind of exercise.
 
 We drafted a vision doc for Async Rust. This process began by talking to lots of Async Rust users about their experiences, both good and bad. We then brainstormed out possible ways to address the gaps we saw and came up with a roadmap for the work we expect to do over the next year or two.
 
@@ -679,41 +829,65 @@ trait AsyncIterator {
 
 ---
 
-# Not good enough?
+# How async Rust should feel
 
-Considering generator syntax:
+> Reliable: <q>if it compiles it works</q>
 
-```rust
-async fn* add_one(
-  input: impl AsyncIterator<Item = u32>
-) yield u32 {
-  while let Some(i) = input.next().await {
-    yield i + 1;
-  }
-}
-```
+Challenges:
+
+* *Portability*
+* *Subtle details of the poll model*
+* *Cancellation*
 
 ---
 
-# Benefits all users alike
+# How async Rust should feel
 
-The <q>shiny future</q> rests on a lot of pieces:
+> Reliable: <q>if it compiles it works</q>
 
-* Type alias impl trait: `type Foo = impl Bar`.
-* Impl trait in traits: `fn foo() -> impl Trait`.
-* Generic associated types: `type Foo<'a>`.
-* Const generics `SmallBox<22, T>`.
-* Improvements to `dyn` trait.
+Solutions:
+
+* APIs for portable libraries that support multiple runtimes.
+* Parallel async iterator APIs like Rayon.
+* Structured concurrency primitives for managing cancellation, task scheduling.
 
 ---
 
-# Beyond Rust lang
+# Transparency
 
-Tokio console
+> Transparent and tunable: <q>it's easy to diagnose deadlocks and performance bottlenecks</q>
 
-???
+[Eliza Weisman] is building the Tremendously Nifty [tokio-console]:
 
-docs
+![Tokio Console Screenshot](content/images/tokio-console-1.png)
+
+[tokio-console]: https://github.com/tokio-rs/console
+[Eliza Weisman]: https://github.com/hawkw
+
+---
+
+# Documentation and learning
+
+> Empowering: <q>complex stuff feels easy</q>
+
+Planning a revised async book that is oriented at both getting you "up and going" quickly and thoroughly covering key concepts:
+
+* Getting started
+* Fundamental concepts
+* Writing async code
+* ...
+* Design patterns
+
+---
+
+# Not zero sum
+
+* Tools meant for one group tend to benefit everyone:
+  * Console can help you learn, too
+
+--
+* Work on async benefits everyone:
+  * `async fn` in traits requires improvements to trait system
 
 ---
 

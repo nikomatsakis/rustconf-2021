@@ -119,6 +119,22 @@ td pre {
   -webkit-margin-after: 0.5em;
 }
 
+.lessthanamonth {
+  position: absolute;
+  top: 460px;
+  left: 450px;
+  width: 50px;
+  transform: rotate(270deg);
+}
+
+.lessthanayear {
+  position: absolute;
+  top: 460px;
+  left: 570px;
+  width: 50px;
+  transform: rotate(270deg);
+}
+
 .notproductive {
   position: absolute;
   top: 475px;
