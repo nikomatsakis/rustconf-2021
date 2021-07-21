@@ -528,35 +528,49 @@ But I think we could do more than that.
 
 --
 
-Rust is the <q>go to</q> language for systems that **run at scale**.
+Rust is the <q>go to</q> language for anything running in the cloud.
 
-Rust is the <q>go to</q> language for systems where **reliability counts**.
+Rust is the <q>go to</q> language for anything running on embedded devices.
+
+Rust is the <q>go to</q> language for anything running at scale.
+
+Rust is the <q>go to</q> language for anything where **reliability counts**.
 
 ???
 
 What if people were using Rust for anything that was going to run at scale, or for anything where reliability was really important?
 
-I mean...why not. I don't know about you, but I at least have found Rust displacing other languages I used to use, like Python. It's nothing against those languages, which are fantastic. It's just that Rust has a lot to offer: you get cargo and easy access to great libraries like serde. Moreover, when you wield Rust well, the code can be remarkably concise and clean. The borrow checker isn't much of a bother, because you can clone or box or do other things. And when you're done, your code runs fast. Even better, you can come back after six months and still do a successful refactoring.
-
---
-
-.p40[![Galaxy brain](content/images/galaxy-brain.png)]
-
 ---
 
 # What would that be like?
+
+???
+
+So, if we managed that, what would it be like?
 
 --
 
 Pretty dang great, that's what! 😁
 
+???
+
+I think it'd be fantastic.
+
 --
 
 More people → More good ideas
 
+???
+
+The more people using Rust, the more good ideas those people are going to have for how to improve it, or what libraries to build. 
+
 --
 
 More good ideas → More people
+
+???
+
+That in turn leads to more people using Rust.
 
 --
 
@@ -570,15 +584,7 @@ More good ideas → More people
 
 ???
 
-So, if we managed that, what would it be like?
-
-I think it'd be fantastic. Rust has always been premised on the idea that great ideas are everywhere.
-
-The more people we can get working on Rust, the more great libraries we can have, and the more great ideas, the more we will all benefit.
-
-What's more, having more people using Rust leads to more adoption -- it's easier to hire.
-
-And, of course, we're also saving a lot of energy. Something I suspect many of us care about.
+And so on.
 
 ---
 name: how-do-we-get-there-1
@@ -591,7 +597,7 @@ name: how-do-we-get-there-1
 
 ???
 
-So, how are we going to get there? It won't be easy. We have to up our game.
+So, how are we going to get there? It won't be easy. If we really want to get the "time to productivity" to be measured in weeks, that is something we have to approach deliberately.
 
 ---
 
@@ -605,19 +611,25 @@ Always be asking: How do we want Rust to feel?
 
 ???
 
-We always have to be asking ourselves: what is the experience we are trying to create? Have we achieved it?
+We always have to be asking ourselves: what is the experience we are trying to create and have we achieved it?
 
-Rust is trying to square a circle. It's hard, really hard.
-
-We have to work backwards from the experience we want, and forwards from what we know how to do at once.
+Rust is trying to achieve a delicate balance of exposing complexity in a really simple way. It's not easy.
 
 ---
 template: how-do-we-get-there-1
+
+???
+
+So, we have to be focused and creative. What else?
 
 --
 name: how-do-we-get-there-2
 
 * We need to **think broadly**
+
+???
+
+We need to think broadly, by which I mean we have to look at the experience of using Rust holistically. We need to look at what users are trying to do and figure out how to ensure that all the pieces are there, even the things that aren't under our direct control.
 
 ---
 
@@ -630,6 +642,10 @@ name: how-do-we-get-there-2
 .citation[
   [<q>Building a microservice with Rust</q>](https://medium.com/tenable-techblog/building-a-microservice-with-rust-23a4de6e5e14) -- Mikhail Medvedev, Tenable Techblog
 ]
+
+???
+
+Remember that blog post by the folks at Tenable? The one where they radically reduced their resource usage? If you look at their blog, you'll find that before that post came another post, one where they were evaluating Rust. It's a nice read.
 
 ---
 
@@ -645,27 +661,39 @@ name: how-do-we-get-there-2
 >
 > ...
 
+???
+
+Something I found interesting about it was that they spelled out their thought process. They talked about all the pieces they need to assemble to make Rust work for their problem. They were able to pull it off, but in some cases they had to hack a few things together. 
+
 ---
 
 # Thinking broadly
 
 Productivity is not just about the language or stdlib.
 
-Requires learning materials, tooling, and ecosystem.
+Requires learning materials, tooling, and a rich, stable ecosystem.
 
 <q>Whole product thinking</q> has always been a <q>Rust thing</q>, but it's going to be more important than ever.
 
 ???
 
-If we want to make it possible to be productive in 3 weeks, we have to look at the things that people are trying to do and what is blocking them. Those are the problems to attack. They may not be where we expect. In fact, they probably aren't -- if they were, we might have attacked them already.
+For us to push productivity down to a few weeks, we need to make sure that all the pieces people need are in place. This includes the "glue code" to connect systems, but also things like documentation, IDE integration, or debugger support. Learning ownership and borrowing is always going to take some time, but the rest, we can solve.
 
 ---
 template: how-do-we-get-there-2
+
+???
+
+OK, so think broadly, what else?
 
 --
 name: how-do-we-get-there-3
 
 * We need to **be bold**
+
+???
+
+We've got to be willing to take risks.
 
 ---
 
@@ -687,11 +715,9 @@ Is it time to revisit some of those questions? Other questions?
 
 ???
 
-If we want new results, have to do new things.
+If we want new results, we've got to be willing to do new things. Here is a list of things that we have never done, with good reasons!
 
-Here is a list of things that we have never done, and with good reason.
-
-I cannot tell you if revisiting any of these questions would make a difference in terms of "productivity in 3 weeks".
+I cannot tell you if revisiting any of these questions would make a difference in terms of reaching "productivity in 6 weeks".
 
 But I CAN tell you that if we want to achieve that goal, if we want to make Rust a mainstream language, we are going to have to be willing re-examine some of our basic assumptions.
 
