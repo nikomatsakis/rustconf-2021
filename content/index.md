@@ -575,7 +575,7 @@ Editions let us make otherwise impossible changes.
 
 As always, we don't split the ecosystem:
 
-* Crates using Rust 2021 fully interoperate with crates using Rust 2018 and even Rust 2015.
+* Rust 2021 fully interoperate with Rust 2018 and Rust 2015.
 * Tooling handles the migration for you.
 
 ---
