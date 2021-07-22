@@ -492,7 +492,7 @@ So, how do we get there?
 ]
 
 .citation[
-  Seriously though, the whole Rust Evangelism Strike Force thing kind of annoys people. Don't do that.
+  Seriously though, having people show up uninvited and tell you what language you should use for your own project is kind of annoying. Tell them what you like about their project instead!
 ]
 
 ???
