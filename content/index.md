@@ -101,7 +101,7 @@ Rust's goal has always been to "have our cake and eat it to". We want to combine
  e  │        
     │                JS, Ruby, Python
     └─────────────────────────────────
-           Productivity -->
+           Ease of use -->
 ```
 
 ???
@@ -133,7 +133,7 @@ productive, but not all that fast.
  e  │   x     
     │ x              JS, Ruby, Python
     └─────────────────────────────────
-           Productivity -->
+           Ease of use -->
 ```
 
 .bam-rust[
@@ -142,7 +142,7 @@ productive, but not all that fast.
 
 ???
 
-And then we have *bam* Rust. Best of both.
+And then we have *bam* Rust. Best of both, right?
 
 ---
 
@@ -156,6 +156,10 @@ And then we have *bam* Rust. Best of both.
   [<q>Optimizing 700 CPUs Away With Rust</q>](https://medium.com/tenable-techblog/optimizing-700-cpus-away-with-rust-dc7a000dbdb2) -- Alan Ning, Tenable Techblog
 ]
 
+???
+
+When things are going well, this is actually exactly how Rust feels. Check out this blog post from Tenable. They replaced some of their JavaScript code to process logs with Rust, and they saw a huge improvement in resource usage.
+
 ---
 
 # It was even pretty easy to do
@@ -168,9 +172,18 @@ Article continues:
   [<q>Optimizing 700 CPUs Away With Rust</q>](https://medium.com/tenable-techblog/optimizing-700-cpus-away-with-rust-dc7a000dbdb2) -- Alan Ning, Tenable Techblog
 ]
 
+
+???
+
+What's more, it only took them two weeks to do it! Very nice.
+
 ---
 
 # This is how should feel
+
+???
+
+This is exactly how Rust is supposed to feel when it's working well. 
 
 ---
 
@@ -178,15 +191,28 @@ Article continues:
 
 > .font150[<q>It ran well right out of the box!</q>]
 
+???
+
+More precisely, Rust programs are supposed to run quickly. Well, one caveat.
+
 --
 
 > .font150[<q>Then I remembered `cargo run --release`, and it ran *really* well!</q>]
+
+
+???
+
+You do probably want to turn on optimizations.
 
 ---
 
 # Reliable
 
 > .font150[<q>If it compiles, it works</q>]
+
+???
+
+But also, they're supposed to *work*. More to the point, when something compiles, the hope is that if there's a bug, it's not because you don't understand Rust well enough, it's somewhere in the logic of your code. This means you can do things like a huge refactor, or making a loop run in parallel, and find that your code "just works".
 
 ---
 
@@ -196,11 +222,7 @@ Article continues:
 
 ???
 
-When Rust is really working right, it makes what used to be complicated stuff just feel simple.
-
-You want to parallelize that loop? Do it!
-
-You want to use nifty new kernel APIs like io-uring? Do it!
+The bottom line is that when Rust is really working right, it makes what used to be complicated, wizard stuff just feel simple. Want access to that new, nifty kernel API? There's a crate that wraps it in up in a safe interface. Want to run code on an embedded device with no operating system? We got your back. And so forth.
 
 ---
 name: lets-get-real
@@ -223,7 +245,7 @@ name: lets-get-real
  e  │        
     │                JS, Ruby, Python
     └─────────────────────────────────
-           Productivity -->
+           Ease of use -->
 ```
 
 ---
@@ -235,7 +257,7 @@ template: lets-get-real
 
 ???
 
-* If this is what we're shooting for... the performance of C++ with the productivity of JavaScript, I don't think we're quite there.
+* If this is what we're shooting for... the performance of C++ with the ease of use of JavaScript, I don't think we're quite there.
 
 ---
 template: lets-get-real
@@ -253,7 +275,7 @@ template: lets-get-real
 ???
 
 * We're more like here. We've got the great performance. 
-* The productivity can be really high, especially for complex tasks. 
+* Some things are easy, but there's still a lot of details to get right.
 * But on the whole, you just can't claim that Rust is as easy to use as JavaScript or Python. Or even close.
 
 ---
@@ -532,9 +554,7 @@ Rust is the <q>go to</q> language for anything running in the cloud.
 
 Rust is the <q>go to</q> language for anything running on embedded devices.
 
-Rust is the <q>go to</q> language for anything running at scale.
-
-Rust is the <q>go to</q> language for anything where reliability counts.
+Rust is the <q>go to</q> language for all kinds of things, but especially those where reliability counts.
 
 ???
 
