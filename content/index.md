@@ -522,98 +522,6 @@ What if it took six weeks?
 .center[.font300[.font300[😲]]]
 
 ---
-
-# What would that do?
-
----
-
-# Not just changing *who* does system programming...
-
-![new generation](content/images/gogaruco.png)
-
-Yehuda Katz at Golden Gate Ruby Conference 2014
-
----
-
-# ...but changing what systems programming *is*
-
-Rust is the <q>go to</q> language for critical systems
-
-???
-
-Today, people reach for Rust to tackle the hardest problems. 
-
-Things like the rendering engine of a browser, or the core services that underlie the internet.
-
----
-
-# ...but changing what systems programming *is*
-
-Rust is the <q>go to</q> language for ~~critical systems~~
-
-???
-
-But I think we could do more than that.
-
---
-
-Rust is the <q>go to</q> language for anything running in the cloud.
-
-Rust is the <q>go to</q> language for anything running on embedded devices.
-
-Rust is the <q>go to</q> language for all kinds of things, but especially those where reliability counts.
-
-???
-
-What if people were using Rust for anything that was going to run at scale, or for anything where reliability was really important?
-
----
-
-# What would that be like?
-
-???
-
-So, if we managed that, what would it be like?
-
---
-
-Pretty dang great, that's what! 😁
-
-???
-
-I think it'd be fantastic.
-
---
-
-More people → More good ideas
-
-???
-
-The more people using Rust, the more good ideas those people are going to have for how to improve it, or what libraries to build. 
-
---
-
-More good ideas → More people
-
-???
-
-That in turn leads to more people using Rust.
-
---
-
-More people → More good ideas
-
-More good ideas → More people
-
-More people → More good ideas
-
-More good ideas → More people
-
-???
-
-And so on.
-
----
 name: how-do-we-get-there-1
 
 # Upping our game
@@ -975,6 +883,96 @@ The console project is an interesting example. It was developed in response to t
 ???
 
 Similarly, focusing on async doesn't just benefit async. Building the future that I've sketched here is going to require a lot of fundamental improvements to Rust that will benefit sync and async programs alike.
+
+---
+
+# So...what's next?
+
+---
+
+# Not just changing *who* does system programming...
+
+![new generation](content/images/gogaruco.png)
+
+Yehuda Katz at Golden Gate Ruby Conference 2014
+
+???
+
+We've talked before about how Rust's safety guarantees makes systems programming accessible to a much broader pool of people.
+
+---
+
+# ...but changing what systems programming *is*
+
+Rust is the <q>go to</q> language for critical systems
+
+???
+
+But I think that whereas today people are using Rust just for the *hardest problems*, the *critical systems*...
+
+---
+
+# ...but changing what systems programming *is*
+
+Rust is the <q>go to</q> language for ~~critical systems~~
+
+--
+
+Rust is the <q>go to</q> language for anything running in the cloud.
+
+Rust is the <q>go to</q> language for anything running on embedded devices.
+
+Rust is the <q>go to</q> language for all kinds of things, but especially those where reliability counts.
+
+???
+
+...we should aim for people to be using Rust for all kinds of things. Anything that runs on scale, or anything where reliability counts.
+
+---
+
+# What would that be like?
+
+???
+
+So, if we managed that, what would it be like?
+
+--
+
+Pretty dang great, that's what! 😁
+
+???
+
+I think it'd be fantastic.
+
+--
+
+More people → More good ideas
+
+???
+
+The more people using Rust, the more good ideas those people are going to have for how to improve it, or what libraries to build. 
+
+--
+
+More good ideas → More people
+
+???
+
+That in turn leads to more people using Rust.
+
+--
+
+More people → More good ideas
+
+More good ideas → More people
+
+More people → More good ideas
+
+More good ideas → More people
+
+???
+
+And so on.
 
 ---
 
