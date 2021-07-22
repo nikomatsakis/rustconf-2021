@@ -111,7 +111,7 @@ way up there, really fast, but kind of hard to use
 correctly.
 
 Then we have JavaScript, Ruby, etc, way over there,
-productive, but not all that fast.
+easy to use, but not all that fast.
 
 ---
 
