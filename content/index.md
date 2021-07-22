@@ -534,7 +534,7 @@ Rust is the <q>go to</q> language for anything running on embedded devices.
 
 Rust is the <q>go to</q> language for anything running at scale.
 
-Rust is the <q>go to</q> language for anything where **reliability counts**.
+Rust is the <q>go to</q> language for anything where reliability counts.
 
 ???
 
@@ -732,19 +732,11 @@ As always, we don't split the ecosystem:
 * Rust 2021 fully interoperates with Rust 2018 and Rust 2015.
 * Tooling handles the migration for you.
 
----
+???
 
-# Rust 2021 Edition: Highlights
+On that note, of being bold, it's a good time to talk about editions. This year, we are releasing Rust 2021. The idea of an edition is that every crate declares the edition of Rust they want to use -- Rust 2015, Rust 2018, or (soon) Rust 2021. No matter which edition you use, your crate interoperates with other crates. Even better, if you have an existing crate, we have tooling that will automatically convert it from one edition to the next.
 
-## Enabling better format strings
-
-```rust
-let mut x = 22;
-println!("{x}");
-```
-
-Shoutout to Mara Bos (next speaker!) for driving that process!
-
+So how are we using this tool? The idea is to make targeted improvements that make Rust easier to use. They're often things you might not even realize have changed -- it's just that you suddenly have fewer problems than you had before.
 ---
 
 # Rust 2021 Edition: Highlights
@@ -763,6 +755,28 @@ In Rust 2021: works! 🎉
 
 Shoutout to the [RFC 2229 project group](https://www.rust-lang.org/governance/teams/compiler#wg-rfc-2229) for their hard work on this over the last year: Aman Arora, Archer Zhang, Chris Pardy, Dhruv Jauhar, Jennifer Willis, logmosier, Roxane. Y'all rock!
 
+???
+
+As one example, we're changing how closures work. In Rust 2018, closures always capture an entire variable, but this can make code like this stop working -- because both closures move `tuple`. In 2021, this code will compile, just like you would expect.
+
+---
+
+# Rust 2021 Edition: Highlights
+
+## Enabling better format strings
+
+```rust
+let mut x = 22;
+println!("{x}");
+// instead of `println!("{}", x)`
+```
+
+Shoutout to Mara Bos (next speaker!) for driving that process!
+
+???
+
+We also use editions to make more obvious features. For example, we recently decided to add better format strings where you can name variables in the string itself. In some edge cases, though, this broke backwards compatibility, so we used an edition to tweak those edge cases in Rust 2021.
+
 ---
 
 # More shoutouts
@@ -780,10 +794,12 @@ Shoutout to the [RFC 2229 project group](https://www.rust-lang.org/governance/te
 Y'all rock too.
 
 .citation[
-  I couldn't fit all the people who worked on these features on this slide,
-  so I tried to select the folks who did the most work specifically related to the Edition.
-  Hopefully I didn't forget anyone! 💜
+  I couldn't fit all the people who worked on these features on this slide, so I tried to select the folks who did the most work specifically related to the Edition. Hopefully I didn't forget anyone! 💜
 ]
+
+???
+
+There's a lot more in the edition I don't have time to talk about, but I did want to say a big Thank You to all the people who've been working on it.
 
 ---
 
@@ -793,9 +809,19 @@ Y'all rock too.
 
 ???
 
-Earlier this year, Tyler and I undertook a new kind of exercise.
+Earlier this year, Tyler Mandry and I -- coleads of the async foundation working group -- undertook a new kind of exercise that I think could serve as a model for how we improve Rust more generally. We called it the Async Vision Doc.
 
-We drafted a vision doc for Async Rust. This process began by talking to lots of Async Rust users about their experiences, both good and bad. We then brainstormed out possible ways to address the gaps we saw and came up with a roadmap for the work we expect to do over the next year or two.
+You may recall that, 2 years back, we shipped the async-await MVP in Rust. This was a huge achievement. In the meantime, we've had time to gain a lot of experience in Rust, and we wanted to evaluate what we ought to be doing next to improve the async Rust experience.
+
+Our idea was to draft a document that laid out:
+
+* What it's like to use Async Rust today;
+* what we think it *should* be like in a few years time;
+* and a roadmap that will take us there.
+
+Tyler and I began by talking to people using Async Rust. We did this both in private conversations and in public. We even held group writing sessions, where Rustaceans from all over would show up and help us document their experiences.
+
+Next we collated these with how we thought Rust should feel and tried to find places where we were falling short, and what we could do to fix them.
 
 ---
 
@@ -804,6 +830,10 @@ We drafted a vision doc for Async Rust. This process began by talking to lots of
 > Consistent: <q>just add async/await</q>
 >
 > Async Rust should be a small delta atop Sync Rust.
+
+???
+
+Here is one example: Using Async I/O in Rust should, ultimately, be familiar. We should keep a small gap between async Rust and sync Rust, so that it's easy to move from one to the other.
 
 ---
 
@@ -818,6 +848,10 @@ trait Iterator {
   fn next(&mut self) -> Option<Self::Item>;
 }
 ```
+
+???
+
+In practice, though, the gap between async Rust and sync Rust can be surprisingly large. Here's a simple example. This is the *synchronous* Iterator trait. If you know Rust, you're probably familiar with it: it has one method, `next`, that you call to get the next item from the iterator.
 
 ---
 
@@ -835,6 +869,10 @@ trait Stream {
 }
 ```
 
+???
+
+Here is the *asynchronous* iterator trait, `Stream`, that is currently in Nightly. It's actually quite close to the iterator trait, but that's not entirely obvious. The `next` method has become a poll method, for example.
+
 ---
 
 # Where we are headed
@@ -849,29 +887,9 @@ trait AsyncIterator {
 }
 ```
 
----
+???
 
-# How async Rust should feel
-
-> Reliable: <q>if it compiles it works</q>
-
-Challenges:
-
-* *Portability*
-* *Subtle details of the poll model*
-* *Cancellation*
-
----
-
-# How async Rust should feel
-
-> Reliable: <q>if it compiles it works</q>
-
-Solutions:
-
-* APIs for portable libraries that support multiple runtimes.
-* Parallel async iterator APIs like Rayon.
-* Structured concurrency primitives for managing cancellation, task scheduling.
+This is the definition we expect to get to. You can see that this is much closer to the synchronous trait: it's basically the same, but with the async keyword on the `fn` definition.
 
 ---
 
@@ -886,19 +904,29 @@ Solutions:
 [tokio-console]: https://github.com/tokio-rs/console
 [Eliza Weisman]: https://github.com/hawkw
 
+???
+
+Earlier I mentioned that improving Rust means looking beyond the traditional boundaries of the language and libraries. One thing that we found in talking to people using Rust is that there is a real gap in tooling when you shifted to async Rust. Trying to use a traditional debugger, or top, or other such tools just can't tell you what's going on in an async Rust application, since so many of the concepts are defined in user space.
+
+Fortunately, people in th ecosystem are trying to address this need. In the tokio project, for example, Eliza Weisman has been building a really cool monitoring program called the tokio console. It uses the tracing logging library to track what is happening in your async Rust application and give you a view of all the active tasks and what they're up to. The idea is to extend it with other kinds of monitoring, such as detecting and warning about common pitfalls.
+
+Looking forward, the vision doc outlines a number of improvements we can do to tooling, ranging from better debugger integration, to live profiling for running services, to things like profiler-guided optimization specific to async Rust. I would like to see us take cool projects like tokio console and incorporate them together into a standard suite of Rust profiling and debugging tools.
+
 ---
 
-# Documentation and learning
+# More things in the vision doc...
 
-> Empowering: <q>complex stuff feels easy</q>
+* APIs for portability across runtimes
+* Ability to spawn tasks that can access borrowed data.
+* Structured concurrency and a revised cancellation model.
+* Sync and async generators for writing iterators
+* Revised async book that covers both getting started and key design patterns
 
-Planning a revised async book that is oriented at both getting you "up and going" quickly and thoroughly covering key concepts:
+[Read the whole thing.](https://rust-lang.github.io/wg-async-foundations)
 
-* Getting started
-* Fundamental concepts
-* Writing async code
-* ...
-* Design patterns
+???
+
+There's a lot more in the async vision doc, so give it a read.
 
 ---
 
@@ -907,14 +935,28 @@ Planning a revised async book that is oriented at both getting you "up and going
 * Tools meant for one group tend to benefit everyone:
   * Console can help you learn, too
 
+???
+
+One thing I want to emphasize. Throughout this talk, I've been focusing on reducing learning curve. I sometimes get the pushback that we should be working instead fo enable more powerful features, or to better serve power users. There's definitely tension there, but I think much less than is commonly believed. Usually a tool that helps one group winds up helping the other as well -- and in both directions.
+
+The console project is an interesting example. It was developed in response to the needs of existing developers, people who are running services and want to debug them. But one bit of feedback we've gotten is that it can serve as a really useful teaching tool as well, since it helps people to understand what's going on under the hood.
+
 --
 * Work on async benefits everyone:
   * `async fn` in traits requires improvements to trait system
 
+???
+
+Similarly, focusing on async doesn't just benefit async. Building the future that I've sketched here is going to require a lot of fundamental improvements to Rust that will benefit sync and async programs alike.
+
 ---
 
-# In closing...
+# Future so bright, you gotta wear 😎
 
-* Future so bright, you gotta wear 😎
-* Rust is seeing more use, and more investment, than ever before.
-* Rust is going to get both easier to learn and more powerful.
+* 2015: Prove it can work ✅
+* 2021: Critical adoption, sustainability ✅
+* Next goal: Widespread usage: become an industry standard ⏳
+
+???
+
+That brings me to the end of my talk. I'm really excited about what's coming up for Rust over the next few years, and I hope that I've gotten you excited as well. Thanks very much for listening, and I hope that you enjoy the rest of RustConf!
