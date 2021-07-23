@@ -688,7 +688,7 @@ In Rust 2018: error. 😢
 
 In Rust 2021: works! 🎉
 
-Shoutout to the [RFC 2229 project group](https://www.rust-lang.org/governance/teams/compiler#wg-rfc-2229) for their hard work on this over the last year: Aman Arora, Archer Zhang, Chris Pardy, Dhruv Jauhar, Jennifer Willis, logmosier, Roxane. Y'all rock!
+Shoutout to the [RFC 2229 project group](https://www.rust-lang.org/governance/teams/compiler#wg-rfc-2229) for their hard work on this over the last year: Aman Arora, Archer Zhang, Chris Pardy, Dhruv Jauhar, Jennifer Willis, logmosier, Roxane Fruytier. Y'all rock!
 
 ???
 
