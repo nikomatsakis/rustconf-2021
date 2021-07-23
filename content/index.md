@@ -744,15 +744,31 @@ There's a lot more in the edition I don't have time to talk about, but I did wan
 
 ???
 
-Earlier this year, Tyler Mandry and I -- coleads of the async foundation working group -- undertook a new kind of exercise that I think could serve as a model for how we improve Rust more generally. We called it the Async Vision Doc.
+So, we're ready to be focused, creative, and bold. How do we decide what to do? It happens that this very question was facing us earlier this year, as we thought about how to approach async rust.
 
-You may recall that, 2 years back, we shipped the async-await MVP in Rust. This was a huge achievement. In the meantime, we've had time to gain a lot of experience in Rust, and we wanted to evaluate what we ought to be doing next to improve the async Rust experience.
+You may recall that, 2 years back, we shipped the async-await MVP in Rust. This was a huge achievement. In the meantime, we've had time to gain a lot of experience in Rust, and we wanted to decide what we ought to be doing next to improve the async Rust experience. The problem is that there is such a huge range of possibilities, with so many variations to explore. How do we get everybody on the same page?
 
-Our idea was to draft a document that laid out:
+---
 
-* What it's like to use Async Rust today;
-* what we think it *should* be like in a few years time;
-* and a roadmap that will take us there.
+# The status quo
+
+???
+
+I was discussing this with Shane Miller, the manager of the AWS Rust Platform team, and she shared with me some of the approaches that she had used to do similar product drives within Amazon and elsewhere in the past. The idea was to start with an in-depth examination of the *status quo* -- what is it like to use Async Rust today? This gives you a good view both of what problems people want to solve, but also the myriad challenges that they face in doing so.
+
+Importantly, these challenges are often not in the areas you think. As a simple example, when  discussing Async Rust with working programmers, often the first thing *they* talked about was the question of which IDE to use, and how well the debugger worked (or didn't, as the case may be). This of course is not specific to async Rust, but it can be a blocker to adoption nonetheless.
+
+---
+
+# The shiny future
+
+Once you have a good handle on the status quo, the next step is to draft the *shiny future*. The idea is to replay same "status quo" stories, but think about what it would feel and be like if it went right. At this stage, you don't have to worry about exactly how you will achieve that. You just have to think about what you would like to achieve, trust in your own ability to find a path that gives that feeling.
+
+---
+
+# The roadmap
+
+Finally, you draw up a *roadmap*. These are the specific first steps that will lead to achieving the shiny future.
 
 Tyler and I began by talking to people using Async Rust. We did this both in private conversations and in public. We even held group writing sessions, where Rustaceans from all over would show up and help us document their experiences.
 
