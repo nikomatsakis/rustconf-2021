@@ -688,7 +688,7 @@ In Rust 2018: error. 😢
 
 In Rust 2021: works! 🎉
 
-Shoutout to the [RFC 2229 project group](https://www.rust-lang.org/governance/teams/compiler#wg-rfc-2229) for their hard work on this over the last year: Aman Arora, Archer Zhang, Chris Pardy, Dhruv Jauhar, Jennifer Willis, logmosier, Roxane Fruytier. Y'all rock!
+Shoutout to the [RFC 2229 project group](https://www.rust-lang.org/governance/teams/compiler#wg-rfc-2229) for their hard work on this over the last year: Aman Arora, Archer Zhang, Chris Pardy, Dhruv Jauhar, Jennifer Willis, Logan Mosier, Roxane Fruytier. Y'all rock!
 
 ???
 
@@ -738,15 +738,20 @@ There's a lot more in the edition I don't have time to talk about, but I did wan
 
 ---
 
-# Async vision doc
+# How to visioneer
 
-![2021-07-17](content/images/2021-07-17-Blog.png)
 
 ???
 
 So, we're ready to be focused, creative, and bold. How do we decide what to do? It happens that this very question was facing us earlier this year, as we thought about how to approach async rust.
 
 You may recall that, 2 years back, we shipped the async-await MVP in Rust. This was a huge achievement. In the meantime, we've had time to gain a lot of experience in Rust, and we wanted to decide what we ought to be doing next to improve the async Rust experience. The problem is that there is such a huge range of possibilities, with so many variations to explore. How do we get everybody on the same page?
+
+---
+
+# January 5, 2021
+
+
 
 ---
 
@@ -770,9 +775,16 @@ Once you have a good handle on the status quo, the next step is to draft the *sh
 
 Finally, you draw up a *roadmap*. These are the specific first steps that will lead to achieving the shiny future.
 
-Tyler and I began by talking to people using Async Rust. We did this both in private conversations and in public. We even held group writing sessions, where Rustaceans from all over would show up and help us document their experiences.
+---
+
+# Async vision doc
+
+![2021-07-17](content/images/2021-07-17-Blog.png)
+
+Right, so that was the template we wanted to apply, but the problem that Tyler awe wanted to adapt it from a setting like AWS into something appropriate for an open source project like Rust. What we did was to create a repo where people could open PRs with their open stories. To help encourage people to draft, we help public writing sessions, where Rustaceans from all over would show up and help us document their experiences. We also met privately with people to get a more detailed look. 
 
 Next we collated these with how we thought Rust should feel and tried to find places where we were falling short, and what we could do to fix them.
+
 
 ---
 
