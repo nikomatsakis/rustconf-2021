@@ -15,18 +15,16 @@ count: false
 
 * Been working on Rust since 2011
 * Probably the longest continuous time of *any human on earth*
-* Just sayin'<sup>1</sup>
-
-.citation[
-  <sup>1</sup> I needed three bullets.
-
-  <sup>2</sup> There are, apparently, no other pictures of me. Anywhere.
-]
+* Gets his daughter to draw his conference artwork
 
 .p25[
   .center[
-    <img src="content/images/me.png" align="top"/> <sup>2</sup>
+    <img src="content/images/me.png" align="top"/> <sup>1</sup>
   ]
+]
+
+.citation[
+  <sup>1</sup> If this picture looks familiar, it's because there are, apparently, no other pictures of me anywhere.
 ]
 
 ???
@@ -77,8 +75,10 @@ Is this... it?
 
 Did we... make it?
 
+.center[
 .p50[
 ![Ferris thinking](content/images/ferris_thinking.jpg)
+]
 ]
 
 .citation[
@@ -340,6 +340,9 @@ On the whole, you just can't claim that Rust is as easy to use as JavaScript or 
 
 ---
 
+name: learning-rust-takes-time
+
+
 # Learning Rust takes time
 
 .center[
@@ -348,13 +351,17 @@ On the whole, you just can't claim that Rust is as easy to use as JavaScript or 
 (Rust 2019 Survey Results)
 ]
 
+--
+
 ???
 
 I mean, let's look at the survey results. This chart is from 2019 -- I didn't have ready access to a chart from 2020, but I'm sure the results are comparable.
 
 Here, we asked people how long it took until they felt productive using Rust.
 
---
+---
+
+template: learning-rust-takes-time
 
 .lessthanamonth[![Arrow](content/images/Arrow.png)]
 
@@ -364,7 +371,9 @@ You can see there's a good chunk of people that pick up Rust fairly quickly. The
 
 Trust me, without all the hard work that we've put into careful design, error messages, documentation, and the like, this number would be a lot smaller.
 
---
+---
+
+template: learning-rust-takes-time
 
 .lessthanayear[![Arrow](content/images/Arrow.png)]
 
@@ -372,7 +381,9 @@ Trust me, without all the hard work that we've put into careful design, error me
 
 None the less, for even more people, getting productive in Rust was measured not in weeks, but in months. 
 
---
+---
+
+template: learning-rust-takes-time
 
 .notproductive[![Arrow](content/images/Arrow.png)]
 
@@ -384,7 +395,9 @@ Now you might be thinking, I bet those people who don't feel productive are all 
 
 ---
 
-# Some folks *never* feel productive
+name: some-folks-never-feel-productive
+
+# Sometimes a lot of time
 
 .center[
 ![How long have "not productive yet" folks been learning Rust?](./content/images/22-unproductive-expertise.svg)
@@ -392,13 +405,17 @@ Now you might be thinking, I bet those people who don't feel productive are all 
 (Rust 2019 Survey Results)
 ]
 
+--
+
 ???
 
 Wrong.
 
 We thought the same thing, so we looked at how long people who said they didn't feel productive had been using Rust.
 
---
+---
+
+template: some-folks-never-feel-productive
 
 .fewmonths[![Arrow](content/images/Arrow.png)]
 
@@ -406,7 +423,9 @@ We thought the same thing, so we looked at how long people who said they didn't 
 
 For many of them, it's a few months. Now, you could call that a beginner, although I think it shoudln't take months to feel productive in a language.
 
---
+---
+
+template: some-folks-never-feel-productive
 
 .neverproductive[![Arrow](content/images/Arrow.png)]
 
@@ -452,11 +471,7 @@ The fact is, Rust really rocks...
 
 I recently heard the best phrase ever to describe this. "Rust is the language where you get the hangover first". This is perfect on so many levels.
 
-First, the obvious: that getting used to Rust takes time, but once you're past the hangover, you feel like you have a new pair of wings. It's a lot easier to build and maintain ambitious projects. And actually, not just ambitious ones. 
-
-Once you've got your groove in Rust, it's really great! You can grab packages from cargo, write high-level code with iterators and closures a nifty APIs, and things run super fast!
-
-I hear a lot of people saying "At first I used Rust to write the powerful project. But then I had this old script I had written and I needed to modify it. It seemed easier to just rewrite it in Rust. The code is about the same length, but now it runs faster, and I'm not afraid to come back to it and change it later."
+First, the obvious: that getting used to Rust takes time, but once you're past the hangover, you feel like you have a new pair of wings. It's a lot easier to build and maintain ambitious projects. And actually, not just ambitious ones. I hear a lot of people saying "At first I just used Rust to write the powerful project. But then I had this old script I had written and I needed to modify it. It seemed easier to just rewrite it in Rust. Then I could use cargo. The code is about the same length, but now it runs faster, and I'm not afraid to come back to it and change it later."
 
 And this is exactly why this metaphor is awesome: it works the other way, too. With many other languages, everything feels great at first, but the hangover comes when you try to manage the maintenance.
 
