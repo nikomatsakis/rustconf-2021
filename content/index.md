@@ -14,7 +14,7 @@ count: false
 # Fun facts about me
 
 * Been working on Rust since 2011
-* Probably the longest continuous time of *any human on earth*
+* Maybe the longest continuous time of *any human on earth*??
 * Gets his daughter to draw his conference artwork
 
 .p25[
