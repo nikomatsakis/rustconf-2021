@@ -11,6 +11,31 @@ count: false
 
 ---
 
+# Fun facts about me
+
+* Been working on Rust since 2011
+* Probably the longest continuous time of *any human on earth*
+* Just sayin'<sup>1</sup>
+
+.citation[
+  <sup>1</sup> I needed three bullets.
+
+  <sup>2</sup> There are, apparently, no other pictures of me. Anywhere.
+]
+
+.p25[
+  .center[
+    <img src="content/images/me.png" align="top"/> <sup>2</sup>
+  ]
+]
+
+???
+
+Hi, my is Niko Matsakis. I have been working on Rust since 2011, when I joined Mozilla research.
+I recently moved over to AWS, where I am continuing to work on improving Rust.
+
+---
+
 # 2021
 
 - Rust foundation launched! 🎉
@@ -83,7 +108,7 @@ Rust's goal has always been to "have our cake and eat it to". We want to combine
 
 ---
 
-# Cheesy graph
+# The graph
 
 ```
  ^  |
@@ -211,7 +236,7 @@ Performant. You don't have to avoid fancy features like closures or iterators to
 
 .center[
 .p25[
-![Run fast](content/images/run-fast.jpg) ![Run faster](content/images/run-faster.jpeg)
+![Run faster](content/images/run-faster.jpeg)
 ]
 ]
 
@@ -235,7 +260,7 @@ Rust code should also be...
 
 ???
 
-Reliable. When something compiles, if there's a bug, it's not because you don't understand Rust well enough, it's somewhere in the logic of your code. This means you can do things like a huge refactor, or making a loop run in parallel, and find that your code "just works".
+Reliable. Our goal is always "if it compiles, it works". Of course that's not actually true. But it is true, while getting Rust code to compile can be non-trivial, it often happens that things work on the first try. And when there's a bug, it's usually somewhere in your logic, not a result of surprising Rust semantics. In practical terms, this means you can do things like a huge refactor, or making a loop run in parallel, and find that your code "just works" when you're done.
 
 Finally, when Rust is working well, it's...
 
@@ -433,7 +458,7 @@ Once you've got your groove in Rust, it's really great! You can grab packages fr
 
 I hear a lot of people saying "At first I used Rust to write the powerful project. But then I had this old script I had written and I needed to modify it. It seemed easier to just rewrite it in Rust. The code is about the same length, but now it runs faster, and I'm not afraid to come back to it and change it later."
 
-And this is exactly why this metaphor is awesome: it works the other way, too. In a lot of languages, everything feels great at first, but the hangover comes when you try to manage the maintenance.
+And this is exactly why this metaphor is awesome: it works the other way, too. With many other languages, everything feels great at first, but the hangover comes when you try to manage the maintenance.
 
 ---
 
@@ -487,7 +512,7 @@ So to come back to my original question. Are we there yet? No, not yet, but we'v
 
 ???
 
-If you think back to 2015, when we shipped 1.0, we showed that Rust actualy *can work*. This what had seemed like a pie-in-the-sky research effort could actually be used to ship production sytems.
+If you think back to 2015, when we shipped 1.0, we showed that Rust actually *can work*. This what had seemed like a pie-in-the-sky research effort could be used to ship production sytems.
 
 --
 * 2021: Critical adoption, sustainability ✅
@@ -497,7 +522,7 @@ If you think back to 2015, when we shipped 1.0, we showed that Rust actualy *can
 The next milestone I think we passed this year. We've seen Rust adoption grow to the point where it is used in many critical systems. We're seeing more and more Rust developers being hired to work on the project, which will help us grow faster and be more sustainable.
 
 --
-* Next goal: Widespread usage: become an industry standard ⏳
+* Next goal: Widespread usage ⏳
 
 ???
 
@@ -1047,7 +1072,7 @@ And so on.
 
 * 2015: Prove it can work ✅
 * 2021: Critical adoption, sustainability ✅
-* Next goal: Widespread usage: become an industry standard ⏳
+* Next goal: Widespread usage ⏳
 
 ???
 
