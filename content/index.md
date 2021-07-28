@@ -2,7 +2,7 @@ class: center
 name: title
 count: false
 
-# RustConf 2021
+# Rust in 2021: Where to next?
 
 <img src="content/images/mascot-lockup.svg"/>
 
@@ -29,7 +29,10 @@ count: false
 
 ???
 
-Hi, my is Niko Matsakis. I have been working on Rust since 2011, when I joined Mozilla research.
+Hi, my is Niko Matsakis! I am the co-lead of the language design team and also a member
+of the compiler team. I've been working on Rust for quite some time, initially
+at Mozilla research, but more recently at AWS, which I joined in January of 2021.
+I'm going to be  I have been working on Rust since 2011, when I joined Mozilla research.
 I recently moved over to AWS, where I am continuing to work on improving Rust.
 
 ---
