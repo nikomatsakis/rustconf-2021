@@ -269,6 +269,14 @@ mark,
   width: 80%;
 }
 
+.p75 img {
+  width: 75%;
+}
+
+.p70 img {
+  width: 75%;
+}
+
 .p60 img {
   width: 60%;
 }
@@ -281,8 +289,16 @@ mark,
   width: 40%;
 }
 
+.p30 img {
+  width: 30%;
+}
+
 .p25 img {
   width: 25%;
+}
+
+.p20 img {
+  width: 20%;
 }
 
 .p100 img {
@@ -319,3 +335,43 @@ mark,
 .transparent {
   opacity: 30%;
 }
+
+.daphnesqarrow {
+  position: absolute;
+  bottom: 100px;
+  left: 200px;
+  width: 50px;
+  transform: rotate(300deg) scale(250%);
+}
+
+.daphnesfarrow {
+  position: absolute;
+  bottom: 250px;
+  left: 150px;
+  width: 50px;
+  transform: rotate(300deg) scale(250%);
+}
+
+/*
+.daphnehtvsf img {
+  animation-duration: 1s;
+  animation-name: centerOnStatusQuo;
+}
+
+#daphnehtvsfbox {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border: 10px solid #000;
+}
+
+@keyframes centerOnStatusQuo {
+  from {
+    width: 80%;
+  }
+
+  to {
+    width: 500%;
+  }
+}
+*/

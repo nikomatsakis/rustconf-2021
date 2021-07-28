@@ -190,14 +190,30 @@ This is exactly how Rust is supposed to feel when it's working well. It's suppos
 
 > .font150[<q>It ran well right out of the box!</q>]
 
+.center[
+.p40[
+![Run fast](content/images/run-fast.jpg)
+]
+]
+
 ???
 
 Performant. You don't have to avoid fancy features like closures or iterators to get Rust programs to run quickly. In fact, using those features often works better than trying to write the code by hand.
 
---
+---
+
+# Performant
+
+> .font150[<q>It ran well right out of the box!</q>]
+
 
 > .font150[<q>Then I remembered `cargo run --release`, and it ran *really* well!</q>]
 
+.center[
+.p25[
+![Run fast](content/images/run-fast.jpg) ![Run faster](content/images/run-faster.jpeg)
+]
+]
 
 ???
 
@@ -211,6 +227,12 @@ Rust code should also be...
 
 > .font150[<q>If it compiles, it works</q>]
 
+.center[
+.p60[
+![Crossed wrenches](content/images/Reliable.jpg)
+]
+]
+
 ???
 
 Reliable. When something compiles, if there's a bug, it's not because you don't understand Rust well enough, it's somewhere in the logic of your code. This means you can do things like a huge refactor, or making a loop run in parallel, and find that your code "just works".
@@ -222,6 +244,12 @@ Finally, when Rust is working well, it's...
 # Above all: Empowering
 
 > .font150[<q>Complex stuff feels easy</q>]
+
+.center[
+.p40[
+![Empowered Person](content/images/Empowered.jpg)
+]
+]
 
 ???
 
@@ -331,7 +359,7 @@ Now you might be thinking, I bet those people who don't feel productive are all 
 
 ---
 
-# Some folks just never learn
+# Some folks *never* feel productive
 
 .center[
 ![How long have "not productive yet" folks been learning Rust?](./content/images/22-unproductive-expertise.svg)
@@ -723,6 +751,7 @@ We also use editions to make more obvious features. For example, we recently dec
 | IntoIterator for arrays | cuviper |
 | Or patterns | mark-i-m, hi-rustin |
 | Reserved syntax | bstrie, lrh2000 |
+| Overall leadership | Mara Bos and myself |
 | General assistance | Ryan Levick, Manish Goregaokar, |
 | | Mark Rousskov  |
 
@@ -740,6 +769,11 @@ There's a lot more in the edition I don't have time to talk about, but I did wan
 
 # How to visioneer
 
+.center[
+.p75[
+![shiny future](content/images/shiny-future.jpg)
+]
+]
 
 ???
 
@@ -749,13 +783,15 @@ You may recall that, 2 years back, we shipped the async-await MVP in Rust. This 
 
 ---
 
-# January 5, 2021
-
-
-
----
-
 # The status quo
+
+.center[
+.p75[
+![shiny future](content/images/shiny-future.jpg)
+]
+]
+
+.daphnesqarrow[![Arrow](content/images/Arrow.png)]
 
 ???
 
@@ -767,13 +803,17 @@ Importantly, these challenges are often not in the areas you think. As a simple 
 
 # The shiny future
 
+.center[
+.p75[
+![shiny future](content/images/shiny-future.jpg)
+]
+]
+
+.daphnesfarrow[![Arrow](content/images/Arrow.png)]
+
+???
+
 Once you have a good handle on the status quo, the next step is to draft the *shiny future*. The idea is to replay same "status quo" stories, but think about what it would feel and be like if it went right. At this stage, you don't have to worry about exactly how you will achieve that. You just have to think about what you would like to achieve, trust in your own ability to find a path that gives that feeling.
-
----
-
-# The roadmap
-
-Finally, you draw up a *roadmap*. These are the specific first steps that will lead to achieving the shiny future.
 
 ---
 
@@ -784,7 +824,6 @@ Finally, you draw up a *roadmap*. These are the specific first steps that will l
 Right, so that was the template we wanted to apply, but the problem that Tyler awe wanted to adapt it from a setting like AWS into something appropriate for an open source project like Rust. What we did was to create a repo where people could open PRs with their open stories. To help encourage people to draft, we help public writing sessions, where Rustaceans from all over would show up and help us document their experiences. We also met privately with people to get a more detailed look. 
 
 Next we collated these with how we thought Rust should feel and tried to find places where we were falling short, and what we could do to fix them.
-
 
 ---
 
